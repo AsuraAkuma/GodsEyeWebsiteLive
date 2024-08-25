@@ -1,0 +1,399 @@
+/* Variables */
+:root {
+    --geGreen: #00ff00;
+    --geRed: #8c1224;
+    --geDarkGrey: #171717;
+    --geMidGrey: #444444;
+    --geDarkerMidGrey: #222222;
+    --geLightGrey: #999999;
+    --geLightYellow: #ffed9a;
+    --geRichYellow: #ffd000;
+}
+
+/* Welcome */
+.body-welcome-header {
+    position: absolute;
+    height: 4.5%;
+    width: 20%;
+    /* border: 2px solid red; */
+    top: 12%;
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/45);
+    cursor: default;
+}
+
+#body-welcome-header-channel {
+    left: 6.25%;
+}
+
+#body-welcome-header-message {
+    left: 28.75%;
+}
+
+#body-welcome-header-title {
+    left: 51.25%;
+}
+
+#body-welcome-header-color {
+    left: 73.75%;
+}
+
+#body-welcome-header-card {
+    top: 40%;
+    left: 6.25%;
+}
+
+
+.body-welcome-input {
+    position: absolute;
+    height: min-content;
+    top: 18%;
+    left: 6.25%;
+    width: 20%;
+    border: none;
+    /* border: 2px solid red; */
+    background-color: var(--geDarkerMidGrey);
+    border-radius: .75vh;
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/50);
+    inline-size: 20%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.body-welcome-input:focus {
+    outline: none;
+    background-color: var(--geMidGrey);
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+#body-welcome-input-message {
+    left: 28.75%;
+}
+
+#body-welcome-input-message:focus {
+    height: min-content;
+    max-height: 20%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: unset;
+}
+
+#body-welcome-input-title {
+    left: 51.25%;
+}
+
+#body-welcome-input-title:focus {
+    height: min-content;
+    max-height: 20%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: unset;
+}
+
+#body-welcome-input-color {
+    /* left: 73.75%; */
+    left: 85%;
+    height: 2.9%;
+    width: 9%;
+    /* border: 2px solid red; */
+    /* box-shadow: 0px 0px 10px 0px red; */
+}
+
+#body-welcome-input-color-code {
+    left: 73.75%;
+    width: 9%;
+}
+
+input[type="color"] {
+    border: none;
+    appearance: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+.body-welcome-card {
+    position: relative;
+    height: 50%;
+    width: 40%;
+    top: 45%;
+    left: 6.25%;
+    border-radius: .75vh;
+    border: none;
+    border-left: solid red;
+    border-width: calc(((100vh + 100vw)/2)/150);
+    background-color: var(--geDarkerMidGrey);
+    cursor: default;
+}
+
+.body-welcome-card-title {
+    position: relative;
+    min-height: 10%;
+    height: min-content;
+    max-height: 20%;
+    width: 80%;
+    left: 1%;
+    font-size: calc(((100vh + 100vw)/2)/35);
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
+    /* border: 2px solid red; */
+}
+
+.body-welcome-card-message {
+    position: relative;
+    left: 1%;
+    top: .5vh;
+    width: 80%;
+    inline-size: 80%;
+    height: 78%;
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/50);
+    /* border: 2px solid red; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+}
+
+#body-welcome-card-img-container {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-content: flex-end;
+    /* border: 2px solid red; */
+}
+
+.body-welcome-card-logo {
+    position: absolute;
+    height: 100%;
+    border-radius: .75vh;
+    border: none;
+    /* border: 2px solid red; */
+}
+
+.body-welcome-card-footer {
+    position: relative;
+    height: 8%;
+    top: 1%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    /* border: 2px solid blue; */
+}
+
+.body-welcome-card-brand {
+    position: relative;
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/55);
+    width: 93%;
+    top: 30%;
+    padding: 0px;
+    /* border: 2px solid blue; */
+}
+
+.body-welcome-card-avatar {
+    position: relative;
+    height: 100%;
+    margin-bottom: 0.5vh;
+    top: 0.5vh;
+    left: 1%;
+    /* border: 2px solid red; */
+}
+
+.body-welcome-button {
+    position: absolute;
+    top: 93%;
+    left: 88%;
+    height: 5%;
+    width: 10%;
+    border-radius: .75vh;
+    border-color: #ffffff00;
+    background-color: var(--geRed);
+    font-size: calc(((100vh + 100vw)/2)/60);
+    color: var(--geLightYellow);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.body-welcome-button:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+    background-color: red;
+    color: var(--geRichYellow);
+}
+
+.body-welcome-paragraph-description {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    height: min-content;
+    width: 45%;
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/50);
+    /* border: 2px solid red; */
+    cursor: default;
+}
+
+@media screen and (max-width: 700px) {
+    #body-welcome-header-channel {
+        /* border: 2px solid red; */
+        width: 90%;
+        left: 5%;
+        top: 10%;
+        height: min-content;
+        font-size: calc(((100vh + 100vw)/2)/30);
+    }
+
+    #body-welcome-input-channel {
+        /* border: 2px solid red; */
+        width: 90%;
+        top: 15%;
+        left: 5%;
+        height: min-content;
+        font-size: calc(((100vh + 100vw)/2)/40);
+    }
+
+    #body-welcome-header-message {
+        /* border: 2px solid red; */
+        width: 90%;
+        top: 19%;
+        left: 5%;
+        height: min-content;
+        font-size: calc(((100vh + 100vw)/2)/30);
+    }
+
+    #body-welcome-input-message {
+        /* border: 2px solid red; */
+        width: 90%;
+        top: 24%;
+        left: 5%;
+        height: min-content;
+        font-size: calc(((100vh + 100vw)/2)/40);
+    }
+
+    #body-welcome-paragraph-description-message {
+        width: 90%;
+        top: 28%;
+        left: 5%;
+        height: min-content;
+        font-size: calc(((100vh + 100vw)/2)/40);
+    }
+
+    #body-welcome-header-title {
+        /* border: 2px solid red; */
+        width: 90%;
+        top: 33%;
+        left: 5%;
+        height: min-content;
+        font-size: calc(((100vh + 100vw)/2)/30);
+    }
+
+    #body-welcome-input-title {
+        /* border: 2px solid red; */
+        width: 90%;
+        top: 38%;
+        left: 5%;
+        height: min-content;
+        font-size: calc(((100vh + 100vw)/2)/40);
+    }
+
+    #body-welcome-header-color {
+        /* border: 2px solid red; */
+        width: 90%;
+        top: 42%;
+        left: 5%;
+        height: min-content;
+        font-size: calc(((100vh + 100vw)/2)/30);
+    }
+
+    #body-welcome-input-color {
+        /* border: 2px solid red; */
+        width: 43.5%;
+        top: 47%;
+        left: 53%;
+        font-size: calc(((100vh + 100vw)/2)/40);
+    }
+
+    #body-welcome-input-color-code {
+        /* border: 2px solid red; */
+        width: 43.5%;
+        top: 47%;
+        left: 5%;
+        font-size: calc(((100vh + 100vw)/2)/40);
+    }
+
+    #body-welcome-header-card {
+        /* border: 2px solid red; */
+        width: 90%;
+        top: 51%;
+        left: 5%;
+        height: min-content;
+        font-size: calc(((100vh + 100vw)/2)/30);
+    }
+
+    #body-welcome-card {
+        top: 56%;
+        width: 90%;
+        left: 5%;
+        height: 35%;
+        border-width: 2vw;
+    }
+
+    #body-welcome-card-title {
+        font-size: calc(((100vh + 100vw)/2)/25);
+        /* border: 2px solid red; */
+    }
+
+    #body-welcome-card-message {
+        font-size: calc(((100vh + 100vw)/2)/40);
+        /* border: 2px solid red; */
+        height: 75%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        overflow-wrap: break-word;
+    }
+
+    .body-welcome-card-footer {
+        /* border: 2px solid red; */
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        justify-content: left;
+        gap: 2%;
+        left: 1%;
+        height: 10%;
+    }
+
+    #body-welcome-card-avatar {
+        height: 90%;
+        /* border: 2px solid red; */
+    }
+
+    #body-welcome-card-brand {
+        position: relative;
+        font-size: calc(((100vh + 100vw)/2)/40);
+        top: 25%;
+        left: 0%;
+        height: min-content;
+        /* border: 2px solid red; */
+    }
+
+    #body-welcome-button-save {
+        width: 30%;
+        left: 65%;
+        font-size: calc(((100vh + 100vw)/2)/25);
+    }
+}

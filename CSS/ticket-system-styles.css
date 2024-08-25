@@ -1,0 +1,304 @@
+/* Variables */
+:root {
+    --geGreen: #00ff00;
+    --geRed: #8c1224;
+    --geDarkGrey: #171717;
+    --geMidGrey: #444444;
+    --geDarkerMidGrey: #222222;
+    --geLightGrey: #999999;
+    --geLightYellow: #ffed9a;
+    --geRichYellow: #ffd000;
+}
+
+/* Animations */
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.body-container {
+    /* border: 2px solid red; */
+    height: 90%;
+    top: 10%;
+}
+
+/* Section list */
+.body-section-list {
+    position: absolute;
+    height: 89%;
+    width: 100%;
+    top: 11%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style: none;
+    /* border: 2px solid red; */
+}
+
+/* Section list item */
+.body-section-list-item {
+    position: relative;
+    top: 2%;
+    width: 100%;
+    height: 96%;
+    margin-bottom: 2%;
+    /* border: 2px solid red; */
+}
+
+/* Panel List */
+.body-section-list-item-list {
+    position: absolute;
+    height: 90%;
+    top: 5%;
+    width: 20%;
+    left: 2%;
+    background-color: var(--geDarkerMidGrey);
+    border-radius: .75vh;
+    list-style: none;
+    overflow-y: auto;
+    overflow-x: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    /* border: 2px solid red; */
+}
+
+.panel-list-item {
+    position: relative;
+    height: 8%;
+    top: 2%;
+    width: 90%;
+    left: 5%;
+    background-color: var(--geMidGrey);
+    border-radius: .75vh;
+    border: 2px solid #17171700;
+    box-shadow: 0px 0px 10px 0px #17171700;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.panel-list-item:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.slider-container {
+    position: absolute;
+    left: 1%;
+    top: 30%;
+    height: 40%;
+    width: 20%;
+}
+
+.panel-list-item-h1 {
+    position: absolute;
+    font-size: calc((((100vh + 100vw)/2)/60));
+    left: 22%;
+    top: 5%;
+    width: 80%;
+    /* border: 2px solid red; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: white;
+}
+
+.panel-list-item-button {
+    position: absolute;
+    font-size: calc((((100vh + 100vw)/2)/60));
+    left: 59%;
+    top: 5%;
+    width: 40%;
+    height: 90%;
+    opacity: 0%;
+}
+
+/* Panel Manager */
+.body-section-list-item-div {
+    position: absolute;
+    height: 90%;
+    top: 5%;
+    width: 50%;
+    left: 23%;
+    border-radius: .75vh;
+    background-color: var(--geDarkerMidGrey);
+    /* border: 2px solid red; */
+}
+
+/* Panel Manager list */
+
+.body-section-list-item-div-list {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.panel-manager-list-item {
+    position: relative;
+    height: 10%;
+    width: 96%;
+    left: 2%;
+    top: 2%;
+    margin-bottom: 1%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+}
+
+.panel-manager-list-item-help {
+    position: relative;
+    height: 30%;
+    top: 5%;
+    filter: invert(360);
+    left: 1%;
+}
+
+/* Headers */
+.panel-manager-list-item-name {
+    position: relative;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/50));
+    cursor: default;
+}
+
+.panel-manager-list-item-help-message {
+    position: absolute;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/65));
+    left: 52%;
+    cursor: default;
+}
+
+.panel-manager-list-item-input {
+    position: absolute;
+    top: 40%;
+    width: 50%;
+    height: min-content;
+    min-height: 10%;
+    background-color: var(--geMidGrey);
+    color: white;
+    border-radius: .75vh;
+    outline: none;
+    border-color: #17171700;
+    text-indent: 1%;
+    font-size: calc((((100vh + 100vw)/2)/60));
+}
+
+/* Panel Summary */
+#panel-summary {
+    left: 74%;
+    width: 24%;
+}
+
+.panel-summary-list-item {
+    position: relative;
+    height: min-content;
+    min-height: 8%;
+    width: 96%;
+    left: 2%;
+    top: 2%;
+    margin-bottom: 1%;
+    /* border: 2px solid red; */
+}
+
+.panel-summary-list-item-name {
+    position: relative;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/50));
+    cursor: default;
+}
+
+.panel-summary-list-item-details {
+    position: relative;
+    width: 100%;
+    top: 2%;
+    text-indent: 1%;
+    color: white;
+    border-radius: .75vh;
+    border-color: #17171700;
+    font-size: calc((((100vh + 100vw)/2)/60));
+    margin-bottom: 2%;
+    transition: all .2s ease-in-out;
+    cursor: default;
+    inline-size: auto;
+    overflow: hidden;
+    overflow-wrap: normal;
+    background-color: var(--geMidGrey);
+    list-style: none;
+    /* border: 2px solid red; */
+    transition: all .2s ease-in-out;
+}
+
+.panel-summary-list-item-details-container {
+    position: relative;
+    height: 5vh;
+    /* border: 2px solid blue; */
+}
+
+#panel-summary-list-item-details-ticketAdminRoles {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    height: 100%;
+    top: 0%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    /* border: 2px solid red; */
+}
+
+.panel-summary-list-item-details-item {
+    position: relative;
+    transition: all .2s ease-in-out;
+    border: 2px solid #17171700;
+    box-shadow: 0px 0px 10px 0px #17171700;
+    height: 80%;
+    top: 5%;
+    width: min-content;
+    white-space: nowrap;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #171717;
+    border-radius: .75vh;
+    left: 1%;
+    /* border: 2px solid green; */
+}
+
+.panel-summary-list-item-details-item:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.panel-summary-list-item-details-item-text {
+    position: relative;
+    font-size: calc((((100vh + 100vw)/2)/60));
+
+}
+
+.panel-summary-list-item-button {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    width: 50%;
+    left: 25%;
+    background-color: var(--geRed);
+    color: var(--geRichYellow);
+    font-size: calc((((100vh + 100vw)/2)/60));
+    border-color: #17171700;
+    border-radius: .75vh;
+    transition: all .2s ease-in-out;
+}
+
+.panel-summary-list-item-button:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+    background-color: red;
+    cursor: pointer;
+}

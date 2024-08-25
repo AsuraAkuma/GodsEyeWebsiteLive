@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket System</title>
+    <meta>
+    <link rel="styleSheet" href="../CSS/basicGuildPage-styles.css" />
+    <link rel="styleSheet" href="../CSS/ticket-system-styles.css" />
+    <link rel="body-background" href="../images/Dekkah_Throne_Room_Output_001.png">
+    <link rel="icon" type="image/png" href="../images/discord icon.png">
+    <!-- Script -->
+    <script src="../JS/profileButton-script.js" type="module"></script>
+    <script src="../JS/ticket-system-script.js" type="module"></script>
+</head>
+
+<body class="body">
+    <div class="body-container" id="body-container">
+        <!-- Start of page code -->
+        <datalist id="datalist-panelChannel"></datalist>
+        <datalist id="datalist-ticketAdminRoles"></datalist>
+        <datalist id="datalist-openCategory"></datalist>
+        <datalist id="datalist-closeCategory"></datalist>
+        <ul class="body-section-list-item-list" id="panel-list">
+        </ul>
+        <div class="body-section-list-item-div" id="panel-manager">
+            <ul class="body-section-list-item-div-list" id="panel-manager-list"></ul>
+        </div>
+        <div class="body-section-list-item-div" id="panel-summary">
+            <ul class="body-section-list-item-div-list" id="panel-summary-list"></ul>
+        </div>
+        <!-- End of page code -->
+    </div>
+    <div class="error-container" id="error-container">
+        <h1 class="error-message" id="error-message">
+            Error
+        </h1>
+    </div>
+    <div class="success-popup" id="success-popup">
+        <div class="success-popup-bar" id="success-popup-bar"></div>
+        <div class=" success-popup-image-container">
+            <img class="success-popup-image" src="../images/check-solid.svg">
+        </div>
+        <div class=" success-popup-words-container">
+            <h2 class="success-popup-words">
+                Your changes have been saved!
+            </h2>
+        </div>
+    </div>
+    <div class="body-dropdown-menu-cover" id="body-dropdown-menu-cover"></div>
+</body>
+<header class="header">
+    <div class="header-section" id="header-section-back">
+        <img src="../images/arrow-left-solid.svg" class="header-section-arrow" id="header-section-arrow-back">
+    </div>
+    <div class="header-section" id="header-section-profile">
+        <button class="header-button" id="header-button-profile">
+            <img class="header-profile-icon" id="header-profile-icon" src="../images/discord icon.png">
+        </button>
+        <div class="header-profile-dropdown-menu" id="header-profile-dropdown-menu">
+            <div class="header-profile-dropdown-menu-button" id="header-profile-dropdown-menu-button-close">
+                <Div class="header-profile-dropdown-menu-button-bar" id="header-profile-dropdown-menu-button-bar-top">
+                </Div>
+                <Div class="header-profile-dropdown-menu-button-bar"
+                    id="header-profile-dropdown-menu-button-bar-bottom"></Div>
+            </div>
+            <ul class="header-profile-dropdown-menu-list" id="header-profile-dropdown-menu-list">
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-home">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-home">
+                        Home
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-servers">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-servers">
+                        My Servers
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-premium-management">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-premium-management">
+                        Premium Management
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-support-server">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-support-server">
+                        Support Server
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Page loader -->
+
+<div class="loader-container" id="loader-container">
+    <!-- Bot Image -->
+    <div class="loader-icon-container" id="loader-icon-container">
+        <img src="../images/gods eye loader.gif" class="loader-icon-animation" id="loader-icon-animation">
+    </div>
+</div>
+
+</html>

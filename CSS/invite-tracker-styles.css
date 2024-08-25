@@ -1,0 +1,808 @@
+/* Variables */
+:root {
+    --geGreen: #00ff00;
+    --geRed: #8c1224;
+    --geDarkGrey: #171717;
+    --geMidGrey: #444444;
+    --geDarkerMidGrey: #222222;
+    --geLightGrey: #999999;
+    --geLightYellow: #ffed9a;
+    --geRichYellow: #ffd000;
+}
+
+/* General */
+.body-section-container {
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    top: 10%;
+    overflow: auto;
+    /* border: 2px solid red; */
+}
+
+.body-section {
+    position: relative;
+    width: 80%;
+    height: 90%;
+    left: 10%;
+    top: 5%;
+    border-radius: .75vh;
+    background-color: var(--geDarkerMidGrey);
+    margin-bottom: 5%;
+    /* border: 2px solid red; */
+}
+
+.body-section-input {
+    position: relative;
+    height: 5%;
+    width: 20%;
+    border-radius: .75vh;
+    outline: none;
+    border-color: #ffffff00;
+    background-color: var(--geMidGrey);
+    color: white;
+    font-size: calc((100vh + 100vw)/2/50);
+    transition: all .2s ease-in-out;
+}
+
+.body-section-input:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-input:focus {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-header {
+    position: absolute;
+    height: min-content;
+    width: 25%;
+    font-size: calc((100vh + 100vw)/2/30);
+    color: white;
+    border-right: 2px solid var(--geMidGrey);
+    border-bottom: 2px solid var(--geMidGrey);
+    text-align: center;
+    border-bottom-right-radius: .75vh;
+    cursor: default;
+    /* border: 2px solid red; */
+}
+
+.body-section-subheader {
+    position: absolute;
+    height: min-content;
+    width: min-content;
+    font-size: calc((100vh + 100vw)/2/40);
+    color: white;
+    cursor: default;
+    /* border: 2px solid red; */
+}
+
+.body-section-button {
+    position: absolute;
+    top: 1%;
+    left: 57%;
+    height: 5%;
+    width: 10%;
+    border-radius: .75vh;
+    border-color: #ffffff00;
+    background-color: var(--geRed);
+    font-size: calc(((100vh + 100vw)/2)/60);
+    color: var(--geLightYellow);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.body-section-button:hover {
+    background-color: red;
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-list {
+    position: absolute;
+    height: 85%;
+    width: 90%;
+    left: 5%;
+    top: 10%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+    /* border: 2px solid red; */
+}
+
+.body-section-list-item {
+    position: relative;
+    height: 8%;
+    width: 90%;
+    left: 5%;
+    top: 2%;
+    border-radius: .75vh;
+    border: 2px solid var(--geMidGrey);
+    margin-bottom: 2%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.body-section-list-item:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-list-item-name {
+    position: absolute;
+    color: white;
+    width: 69%;
+    left: 1%;
+    height: min-content;
+    font-size: calc(((100vh + 100vw)/2)/30);
+    /* border: 2px solid red; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.body-section-list-item-inviteCount {
+    position: absolute;
+    color: white;
+    width: 29%;
+    left: 70%;
+    top: 20%;
+    height: min-content;
+    font-size: calc(((100vh + 100vw)/2)/50);
+    /* border: 2px solid red; */
+    overflow: hidden;
+    text-align: right;
+}
+
+.body-section-list-item:hover .body-section-list-item-span {
+    opacity: 100%;
+}
+
+.body-section-list-item-span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: .75vh;
+    /* border: 2px solid red; */
+    opacity: 0%;
+    transition: all .2s ease-in-out;
+}
+
+.body-section-list-item-button-reset {
+    position: absolute;
+    height: 90%;
+    width: 15%;
+    background-color: var(--geRed);
+    color: var(--geRichYellow);
+    border-radius: .75vh;
+    left: 84%;
+    top: 5%;
+    border-color: #ffffff00;
+    font-size: calc(((100vh + 100vw)/2)/50);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.body-section-list-item-button-reset:hover {
+    background-color: red;
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+/* leaderboard */
+#body-section-input-search {
+    top: 1%;
+    left: 36%;
+}
+
+#body-section-subheader-search {
+    top: 1%;
+    left: 26%;
+}
+
+#body-section-button-sync {
+    left: 68%;
+}
+
+/* Rewards */
+#body-section-list-rewards {
+    width: 60%;
+    /* border: 2px solid red; */
+}
+
+#body-section-subheader-invites {
+    top: 10%;
+    left: 70%;
+}
+
+#body-section-input-invites {
+    top: 15%;
+    left: 70%;
+}
+
+#body-section-subheader-roles {
+    top: 25%;
+    left: 70%;
+}
+
+#body-section-input-roles {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+}
+
+#body-section-button-create {
+    position: absolute;
+    top: 85%;
+    left: 70%;
+    width: 20%;
+}
+
+#body-section-list-roles {
+    position: absolute;
+    width: 20%;
+    height: 40%;
+    top: 40%;
+    left: 70%;
+    border-radius: .75vh;
+    background-color: var(--geMidGrey);
+    list-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.body-section-list-roles-item {
+    position: relative;
+    width: 90%;
+    height: min-content;
+    left: 5%;
+    border: 2px solid var(--geLightGrey);
+    border-radius: .75vh;
+    top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-size: calc(((100vh + 100vw)/2)/50);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.body-section-list-roles-item:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-list-item-invites {
+    position: relative;
+    width: 30%;
+    height: min-content;
+    left: 2%;
+    top: 12.5%;
+    border-radius: .75vh;
+    margin-bottom: 2%;
+    text-align: center;
+    font-size: calc(((100vh + 100vw)/2)/40);
+    transition: all .2s ease-in-out;
+    color: white;
+    /* border: 2px solid red; */
+}
+
+.body-section-list-item-roles {
+    position: absolute;
+    width: 65%;
+    height: 50%;
+    left: 33%;
+    top: 25%;
+    border-radius: .75vh;
+    margin-bottom: 2%;
+    font-size: calc(((100vh + 100vw)/2)/60);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    color: white;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* border: 2px solid red; */
+}
+
+.body-section-list-item-span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-color: rgba(23, 23, 23, 0.75);
+}
+
+.body-section-list-item-button-delete {
+    position: absolute;
+    height: 80%;
+    width: 20%;
+    top: 8%;
+    left: 78%;
+    background-color: var(--geRed);
+    color: var(--geRichYellow);
+    border-radius: .75vh;
+    border: 2px solid #ffffff00;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.body-section-list-item-button-delete:hover {
+    background-color: red;
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+/* Settings */
+.body-section-subsection {
+    position: absolute;
+    height: 15%;
+    width: 30%;
+    top: 10%;
+    left: 5%;
+    background-color: var(--geMidGrey);
+    border-radius: .75vh;
+}
+
+.body-section-subsection-subheader {
+    position: relative;
+    height: min-content;
+    width: 60%;
+    /* border: 2px solid red; */
+    font-size: calc(((100vh + 100vw)/2)/50);
+    color: white;
+    top: 2%;
+    left: 20%;
+    text-align: center;
+    cursor: default;
+}
+
+.body-section-subsection-input {
+    position: relative;
+    top: 5%;
+    left: 2%;
+    height: 25%;
+    width: 94%;
+    border-radius: .75vh;
+    outline: none;
+    border-color: #ffffff00;
+    background-color: var(--geLightGrey);
+    color: white;
+    font-size: calc((100vh + 100vw)/2/55);
+    transition: all .2s ease-in-out;
+}
+
+.body-section-subsection-input:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-subsection-button {
+    position: absolute;
+    width: 50%;
+    background-color: var(--geRed);
+    color: var(--geRichYellow);
+    border-color: #ffffff00;
+    border-radius: .75vh;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.body-section-subsection-button:hover {
+    background-color: red;
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+/* Invite Channel */
+#body-section-subsection-button-channel {
+    top: 65%;
+    left: 25%;
+    height: 25%;
+}
+
+/* Invite Manager */
+#body-section-subsection-inviteManager {
+    top: 30%;
+    height: 65%;
+}
+
+.body-section-subsection-list {
+    position: absolute;
+    height: 70%;
+    width: 90%;
+    top: 15%;
+    left: 5%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+    /* border: 2px solid red; */
+}
+
+.body-section-subsection-list-inviteManager-item {
+    position: relative;
+    height: min-content;
+    width: 95%;
+    left: 2.5%;
+    top: 10px;
+    border-radius: .75vh;
+    margin-bottom: 2%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.body-section-subsection-list-inviteManager-item:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-subsection-list-inviteManager-item:hover .body-section-subsection-list-inviteManager-item-span {
+    opacity: 100%;
+}
+
+.body-section-subsection-list-inviteManager-item-h1 {
+    color: white;
+    font-size: calc((100vh + 100vw)/2/55);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.body-section-subsection-list-inviteManager-item-span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    background-color: rgb(23, 23, 23, .75);
+    border-radius: .75vh;
+    opacity: 0%;
+    transition: all .2s ease-in-out;
+    /* border: 2px solid red; */
+}
+
+.body-section-subsection-list-inviteManager-item-span:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-subsection-list-inviteManager-item-button-delete {
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    height: 50%;
+    width: 30%;
+    background-color: var(--geRed);
+    border-color: #ffffff00;
+    color: var(--geRichYellow);
+    border-radius: .75vh;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.body-section-subsection-list-inviteManager-item-button-delete:hover {
+    background-color: red;
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+#body-section-subsection-button-deleteAll {
+    position: absolute;
+    height: 8%;
+    width: 30%;
+    top: 90%;
+    left: 65%;
+    transition: all .2s ease-in-out;
+}
+
+#body-section-subsection-button-deleteAll:hover {
+    background-color: red;
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+#body-section-subsection-button-pauseAll {
+    position: absolute;
+    height: 8%;
+    width: 30%;
+    top: 90%;
+    left: 20%;
+    transition: all .2s ease-in-out;
+}
+
+#body-section-subsection-button-deleteAll:hover {
+    background-color: red;
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+/* Person Manager */
+#body-section-subsection-personManager {
+    left: 40%;
+    height: 38%;
+    width: 55%;
+}
+
+#body-section-subsection-subheader-personManager {
+    position: absolute;
+    left: 0%;
+    width: 40%;
+}
+
+#body-section-subsection-list-personManager {
+    height: 79%;
+    width: 45%;
+    left: 3%;
+    top: 16%;
+    list-style: none;
+    /* border: 2px solid red; */
+}
+
+.body-section-subsection-list-personManager-item {
+    position: relative;
+    height: min-content;
+    width: 95%;
+    left: 2.5%;
+    top: 10px;
+    border-radius: .75vh;
+    margin-bottom: 2%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    /* border: 2px solid red; */
+}
+
+.body-section-subsection-list-personManager-item:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-subsection-list-personManager-item-h1 {
+    color: white;
+    font-size: calc((100vh + 100vw)/2/55);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.body-section-subsection-list-personManager-item-span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    background-color: rgb(23, 23, 23, .75);
+    border-radius: .75vh;
+    opacity: 0%;
+    transition: all .2s ease-in-out;
+    /* border: 2px solid red; */
+}
+
+.body-section-subsection-list-personManager-item-button-delete {
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    height: 50%;
+    width: 30%;
+    background-color: var(--geRed);
+    border-color: #ffffff00;
+    color: var(--geRichYellow);
+    border-radius: .75vh;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.body-section-subsection-list-personManager-item-button-delete:hover {
+    background-color: red;
+}
+
+.body-section-subsection-list-personManager-item:hover .body-section-subsection-list-personManager-item-span {
+    opacity: 100%;
+}
+
+#body-section-subsection-subheader-bonusInvites {
+    left: 32%;
+}
+
+#body-section-subsection-input-bonusInvites {
+    width: 21.5%;
+    height: 10%;
+    left: 52%;
+}
+
+#body-section-subsection-button-bonusInvites {
+    width: 21.5%;
+    height: 12%;
+    left: 75%;
+    top: 14%;
+}
+
+#body-section-subsection-subheader-memberSearch {
+    left: 34%;
+    top: 8%;
+}
+
+#body-section-subsection-input-memberSearch {
+    width: 21.5%;
+    height: 12%;
+    left: 52%;
+    top: 12%;
+    font-size: calc((100vh + 100vw)/2/60);
+}
+
+#body-section-subsection-button-memberSearch {
+    width: 21.5%;
+    height: 12%;
+    left: 75%;
+    top: 42.75%;
+}
+
+/* Invite Role Manager */
+#body-section-subsection-inviteRoleManager {
+    left: 40%;
+    top: 53%;
+    height: 41.5%;
+    width: 55%;
+}
+
+#body-section-subsection-subheader-inviteRoleManager {
+    position: absolute;
+    left: 2%;
+    width: 44%;
+    /* border: 2px solid red; */
+}
+
+#body-section-subsection-list-inviteRoleManager {
+    height: 79%;
+    width: 45%;
+    left: 3%;
+    top: 16%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* border: 2px solid red; */
+}
+
+.body-section-subsection-list-inviteRoleManager-item {
+    position: relative;
+    height: min-content;
+    width: 95%;
+    left: 2.5%;
+    border-radius: .75vh;
+    /* border: 2px solid red; */
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+
+.body-section-subsection-list-inviteRoleManager-item:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-subsection-list-inviteRoleManager-item:hover .body-section-subsection-list-inviteRoleManager-item-span {
+    opacity: 100%;
+}
+
+.body-section-subsection-list-inviteRoleManager-item-h1 {
+    color: white;
+    font-size: calc((100vh + 100vw)/2/55);
+}
+
+.body-section-subsection-list-inviteRoleManager-item-span {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    border-radius: .75vh;
+    background-color: rgb(23, 23, 23, .75);
+    transition: all .2s ease-in-out;
+    opacity: 0%;
+}
+
+.body-section-subsection-list-inviteRoleManager-item-button-delete {
+    position: absolute;
+    height: 90%;
+    top: 5%;
+    width: 40%;
+    left: 58%;
+    background-color: var(--geRed);
+    color: var(--geRichYellow);
+    border-radius: .75vh;
+    border-color: #ffffff00;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.body-section-subsection-list-inviteRoleManager-item-button-delete:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+    background-color: red;
+}
+
+#body-section-subsection-subheader-inviteCode {
+    left: 45.5%;
+    width: 30%;
+}
+
+#body-section-subsection-subheader-inviteRoles {
+    left: 52%;
+    top: 10%;
+    width: min-content;
+}
+
+#body-section-subsection-input-inviteRoles {
+    width: 45%;
+    height: 10%;
+    left: 52%;
+    top: 10%;
+}
+
+#body-section-subsection-input-inviteCode {
+    width: 45%;
+    height: 10%;
+    left: 52%;
+    top: 5%;
+}
+
+#body-section-subsection-list-activeCodeRoles {
+    height: 12%;
+    width: 45%;
+    left: 52%;
+    top: 60%;
+    border-radius: .75vh;
+    background-color: var(--geLightGrey);
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto;
+    /* border: 2px solid red; */
+}
+
+.body-section-subsection-list-activeCodeRoles-item {
+    position: relative;
+    height: 90%;
+    width: min-content;
+    font-size: calc((100vh + 100vw)/2/45);
+    left: 2%;
+    margin-right: 2%;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: .75vh;
+}
+
+.body-section-subsection-list-activeCodeRoles-item:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-subsection-list-activeCodeRoles-item:hover .body-section-subsection-list-activeCodeRoles-span {
+    opacity: 100%;
+}
+
+#body-section-subsection-button-inviteRoleManager {
+    width: 21.5%;
+    height: 12%;
+    left: 65%;
+    top: 80%;
+}
+
+.body-section-subsection-list-activeCodeRoles-span {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    border-radius: .75vh;
+    font-size: calc((100vh + 100vw)/2/60);
+    color: white;
+    background-color: rgb(23, 23, 23, .75);
+    /* border: 2px solid red; */
+    opacity: 0%;
+    transition: all .2s ease-in-out;
+}
+
+.body-section-subsection-list-activeCodeRoles-img {
+    position: absolute;
+    height: 80%;
+    width: 30%;
+    left: 35%;
+    top: 10%;
+    filter: invert(13%) sepia(100%) saturate(6163%) hue-rotate(358deg) brightness(97%) contrast(113%);
+}

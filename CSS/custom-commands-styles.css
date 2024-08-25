@@ -1,0 +1,317 @@
+/* Variables */
+:root {
+    --geGreen: #00ff00;
+    --geRed: #8c1224;
+    --geDarkGrey: #171717;
+    --geMidGrey: #444444;
+    --geDarkerMidGrey: #222222;
+    --geLightGrey: #999999;
+    --geLightYellow: #ffed9a;
+    --geRichYellow: #ffd000;
+}
+
+/* Custom Commands */
+.body-custom-commands-editor-container {
+    position: relative;
+    height: 88%;
+    top: 11%;
+    width: 48vw;
+    left: 22vw;
+    border-radius: 0.75vh;
+    /* border: 2px solid red; */
+    background-color: var(--geDarkerMidGrey);
+}
+
+.body-custom-commands-editor-header {
+    position: absolute;
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/40);
+    /* border: 2px solid red; */
+    left: 2%;
+}
+
+#body-custom-commands-editor-header-type {
+    position: absolute;
+    top: 10vh;
+}
+
+#body-custom-commands-editor-header-deletestatus {
+    position: absolute;
+    top: 20vh;
+}
+
+#body-custom-commands-editor-header-response {
+    position: absolute;
+    top: 30vh;
+}
+
+.body-custom-commands-editor-input {
+    position: absolute;
+    height: 4%;
+    width: 40%;
+    top: 5%;
+    left: 2%;
+    background-color: #ffffff00;
+    outline: none;
+    border-left: 0px solid var(--geMidGrey);
+    border-right: 0px solid var(--geMidGrey);
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/60);
+    border-bottom: 2px solid var(--geMidGrey);
+}
+
+#body-custom-commands-editor-input-type {
+    position: absolute;
+    top: 15vh;
+}
+
+#body-custom-commands-editor-input-deletestatus {
+    position: absolute;
+    top: 25vh;
+}
+
+#body-custom-commands-editor-input-response {
+    position: absolute;
+    top: 40%;
+    height: min-content;
+    max-height: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    border-bottom: 2px solid var(--geMidGrey);
+}
+
+.body-custom-commands-list-message {
+    position: absolute;
+    color: white;
+    font-size: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 2vh;
+}
+
+.body-custom-commands-editor-button-container {
+    position: relative;
+    top: 93%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    /* border: 2px solid red; */
+}
+
+.body-custom-commands-editor-button {
+    position: relative;
+    height: 100%;
+    width: 15%;
+    left: 2%;
+    border-radius: .75vh;
+    border-color: #ffffff00;
+    background-color: var(--geRed);
+    font-size: calc(((100vh + 100vw)/2)/60);
+    color: var(--geLightYellow);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: none;
+}
+
+.body-custom-commands-editor-button:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+    background-color: red;
+    color: var(--geRichYellow);
+}
+
+.body-custom-commands-list-container {
+    position: absolute;
+    height: 88%;
+    top: 11%;
+    width: 20%;
+    border-right: 2px solid var(--geDarkerMidGrey);
+    /* border: 2px solid red; */
+}
+
+.body-custom-commands-list {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* border: 2px solid red; */
+}
+
+.body-custom-commands-list-item {
+    position: relative;
+    height: 8%;
+    width: 90%;
+    overflow: hidden;
+    margin-bottom: 2%;
+    top: 1vh;
+    left: 5%;
+    cursor: pointer;
+    border-radius: .75vh;
+    border: 2px solid var(--geDarkerMidGrey);
+    transition: all .2s ease-in-out;
+}
+
+.body-custom-commands-list-item:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-custom-commands-list-item-name {
+    position: absolute;
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/45);
+    left: 25%;
+    top: 10%;
+    width: 16.1vw;
+    /* border: 2px solid red; */
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.body-custom-commands-list-item-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    left: 2%;
+    top: 65%;
+    width: 100%;
+    height: 30%;
+    /* border: 2px solid red; */
+}
+
+.body-custom-commands-list-item-type {
+    position: relative;
+    color: #444444;
+    top: 0%;
+    font-size: calc(((100vh + 100vw)/2)/75);
+    cursor: pointer;
+    width: min-content;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    /* border: 2px solid blue; */
+}
+
+.body-custom-commands-list-item-deleteStatus {
+    position: relative;
+    color: #444444;
+    top: 0%;
+    width: 60%;
+    font-size: calc(((100vh + 100vw)/2)/75);
+    cursor: pointer;
+    /* border: 2px solid blue; */
+}
+
+.slider-container {
+    position: relative;
+    height: 40%;
+    width: 20%;
+    top: 15%;
+    left: 2%;
+    border: none;
+    cursor: pointer;
+    /* border: 2px solid blue; */
+}
+
+@media screen and (max-width: 800px) {
+    .body-custom-commands-editor-container {
+        position: relative;
+        height: 88%;
+        top: 11%;
+        width: 55%;
+        left: 42%;
+        border-radius: 0.75vh;
+        /* border: 2px solid red; */
+        background-color: var(--geDarkerMidGrey);
+    }
+
+    .body-custom-commands-editor-header {
+        position: absolute;
+        color: white;
+        font-size: calc(((100vh + 100vw)/2)/30);
+        /* border: 2px solid red; */
+        left: 2%;
+    }
+
+    #body-custom-commands-editor-header-type {
+        position: absolute;
+        top: 10vh;
+    }
+
+    #body-custom-commands-editor-header-deletestatus {
+        position: absolute;
+        top: 20vh;
+    }
+
+    #body-custom-commands-editor-header-response {
+        position: absolute;
+        top: 30vh;
+    }
+
+    .body-custom-commands-editor-input {
+        position: absolute;
+        height: 4%;
+        width: 96%;
+        top: 5%;
+        left: 2%;
+        background-color: #ffffff00;
+        outline: none;
+        border-left: 0px solid var(--geMidGrey);
+        border-right: 0px solid var(--geMidGrey);
+        border-bottom: 2px solid var(--geMidGrey);
+        color: white;
+        font-size: calc(((100vh + 100vw)/2)/45);
+    }
+
+    #body-custom-commands-editor-input-type {
+        position: absolute;
+        top: 15vh;
+    }
+
+    #body-custom-commands-editor-input-deletestatus {
+        position: absolute;
+        top: 25vh;
+    }
+
+    #body-custom-commands-editor-input-response {
+        position: absolute;
+        border-bottom: 2px solid var(--geMidGrey);
+        top: 40%;
+        max-height: 52%;
+        height: min-content;
+        overflow-y: auto;
+        overflow-x: hidden;
+        overflow-wrap: break-word;
+    }
+
+    .body-custom-commands-list-container {
+        width: 40%;
+    }
+
+    .body-custom-commands-list-item-deleteStatus {
+        top: 0%;
+        font-size: calc(((100vh + 100vw)/2)/70);
+    }
+
+    .body-custom-commands-list-item-type {
+        top: 0%;
+        font-size: calc(((100vh + 100vw)/2)/70);
+    }
+
+    .body-custom-commands-list-item-name {
+        font-size: calc(((100vh + 100vw)/2)/35);
+        left: 25%;
+        top: 15%;
+        width: 70%;
+        /* border: 2px solid red; */
+    }
+
+    .body-custom-commands-editor-button {
+        width: 25%;
+        font-size: calc(((100vh + 100vw)/2)/45);
+    }
+
+}

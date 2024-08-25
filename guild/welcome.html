@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <meta>
+    <link rel="styleSheet" href="../CSS/basicGuildPage-styles.css" />
+    <link rel="styleSheet" href="../CSS/welcome-styles.css" />
+    <link rel="body-background" href="../images/Dekkah_Throne_Room_Output_001.png">
+    <link rel="icon" type="image/png" href="../images/discord icon.png">
+    <!-- Script -->
+    <script src="../JS/profileButton-script.js" type="module"></script>
+    <script src="../JS/welcome-script.js" type="module"></script>
+</head>
+
+<body class="body">
+    <div class="body-container" id="body-container">
+        <!-- Start of page code -->
+        <datalist id="body-welcome-card-datalist-channel"></datalist>
+        <h1 class="body-welcome-header" id="body-welcome-header-channel">
+            Select a Channel:
+        </h1>
+        <input class="body-welcome-input" id="body-welcome-input-channel" placeholder="Channel" type="search"
+            list="body-welcome-card-datalist-channel">
+        <h1 class="body-welcome-header" id="body-welcome-header-message">
+            Enter your message:
+        </h1>
+        <p class="body-welcome-paragraph-description" id="body-welcome-paragraph-description-message">
+            You can use "﹤user﹥" to mention the user that joined and "﹤server﹥" to mention the server.
+        </p>
+        <p class="body-welcome-input" id="body-welcome-input-message" contenteditable="true">
+        </p>
+        <h1 class="body-welcome-header" id="body-welcome-header-card">
+            Welcome Card
+        </h1>
+        <p class="body-welcome-input" id="body-welcome-input-title" contenteditable="true"></p>
+        <h1 class="body-welcome-header" id="body-welcome-header-title">
+            Enter title:
+        </h1>
+        <h1 class="body-welcome-header" id="body-welcome-header-color">
+            Embed Color:
+        </h1>
+        <input class="body-welcome-input" id="body-welcome-input-color-code" placeholder="#ff0000" maxlength="7">
+        <input class="body-welcome-input" id="body-welcome-input-color" type="color">
+        <div class="body-welcome-card" id="body-welcome-card">
+            <h1 class="body-welcome-card-title" id="body-welcome-card-title">
+                Title
+            </h1>
+            <p class="body-welcome-card-message" id="body-welcome-card-message">
+                Welcome Message
+            </p>
+            <div id="body-welcome-card-img-container">
+                <img class="body-welcome-card-logo" id="body-welcome-card-logo" src="../images/discord logo.png">
+            </div>
+            <div class="body-welcome-card-footer">
+                <img src="../images/discord icon.png" class="body-welcome-card-avatar" id="body-welcome-card-avatar">
+                <h2 class="body-welcome-card-brand" id="body-welcome-card-brand">
+                    Gods Eye
+                </h2>
+            </div>
+        </div>
+        <button class="body-welcome-button" id="body-welcome-button-save">
+            Save
+        </button>
+        <!-- End of page code -->
+    </div>
+    <div class="error-container" id="error-container">
+        <h1 class="error-message" id="error-message">
+            Error
+        </h1>
+    </div>
+    <div class="success-popup" id="success-popup">
+        <div class="success-popup-bar" id="success-popup-bar"></div>
+        <div class=" success-popup-image-container">
+            <img class="success-popup-image" src="../images/check-solid.svg">
+        </div>
+        <div class=" success-popup-words-container">
+            <h2 class="success-popup-words">
+                Your changes have been saved!
+            </h2>
+        </div>
+    </div>
+    <div class="body-dropdown-menu-cover" id="body-dropdown-menu-cover"></div>
+</body>
+<header class="header">
+    <div class="header-section" id="header-section-back">
+        <img src="../images/arrow-left-solid.svg" class="header-section-arrow" id="header-section-arrow-back">
+    </div>
+    <div class="header-section" id="header-section-profile">
+        <div class="center-vert header-section-profile-center">
+            <button class="header-button" id="header-button-profile">
+                <img class="header-profile-icon" id="header-profile-icon" src="../images/discord icon.png">
+            </button>
+        </div>
+        <div class="header-profile-dropdown-menu" id="header-profile-dropdown-menu">
+            <div class="header-profile-dropdown-menu-button" id="header-profile-dropdown-menu-button-close">
+                <Div class="header-profile-dropdown-menu-button-bar" id="header-profile-dropdown-menu-button-bar-top">
+                </Div>
+                <Div class="header-profile-dropdown-menu-button-bar"
+                    id="header-profile-dropdown-menu-button-bar-bottom"></Div>
+            </div>
+            <ul class="header-profile-dropdown-menu-list" id="header-profile-dropdown-menu-list">
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-home">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-home">
+                        Home
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-servers">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-servers">
+                        My Servers
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-premium-management">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-premium-management">
+                        Premium Management
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-support-server">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-support-server">
+                        Support Server
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Page loader -->
+
+<div class="loader-container" id="loader-container">
+    <!-- Bot Image -->
+    <div class="loader-icon-container" id="loader-icon-container">
+        <img src="../images/gods eye loader.gif" class="loader-icon-animation" id="loader-icon-animation">
+    </div>
+</div>
+
+</html>

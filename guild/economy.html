@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economy</title>
+    <meta>
+    <link rel="styleSheet" href="../CSS/basicGuildPage-styles.css" />
+    <link rel="styleSheet" href="../CSS/economy.css" />
+    <link rel="body-background" href="../images/Dekkah_Throne_Room_Output_001.png">
+    <link rel="icon" type="image/png" href="../images/discord icon.png">
+    <!-- Script -->
+    <script src="../JS/profileButton-script.js" type="module"></script>
+    <script src="../JS/economy.js" type="module"></script>
+</head>
+
+<body class="body">
+    <div class="body-container" id="body-container">
+        <!-- Start of page code -->
+        <datalist id="time-units">
+            <option>Seconds</option>
+            <option>Minutes</option>
+            <option>Hours</option>
+            <option>Days</option>
+        </datalist>
+        <datalist id="commands">
+            <option>Work</option>
+            <option>Slut</option>
+            <option>Crime</option>
+            <option>Rob</option>
+        </datalist>
+        <datalist id="types">
+            <option>Win</option>
+            <option>Lose</option>
+        </datalist>
+        <datalist id="discounttype-list">
+            <option>Percent</option>
+            <option>Amount</option>
+        </datalist>
+        <datalist id="usetype-list">
+            <option>User</option>
+            <option>Server</option>
+        </datalist>
+        <datalist id="account-list">
+            <option>Bank</option>
+            <option>Inhand</option>
+        </datalist>
+
+        <datalist id="role-list"></datalist>
+        <datalist id="channel-list"></datalist>
+        <div class="section-container-main" id="main-1">
+            <!-- Delays -->
+            <div class="section-container" id="delays-container">
+                <h1 class="section-container-header">Delays</h1>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="delays-work-input">Work:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="delays-work-input" placeholder="Amount"
+                            type="number" min="0">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="delays-work-input-2" placeholder="Unit"
+                            list="time-units" type="search">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="delays-slut-input">Slut:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="delays-slut-input" placeholder="Amount"
+                            type="number" min="0">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="delays-slut-input-2" placeholder="Unit"
+                            type="search" list="time-units">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="delays-crime-input">Crime:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="delays-crime-input" placeholder="Amount"
+                            type="number" min="0">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="delays-crime-input-2" placeholder="Unit"
+                            type="search" list="time-units">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="delays-rob-input">Rob:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="delays-rob-input" placeholder="Amount"
+                            type="number" min="0">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="delays-rob-input-2" placeholder="Unit"
+                            type="search" list="time-units">
+                    </div>
+                </div>
+                <button class="section-button" id="delays-button-save">Save</button>
+            </div>
+            <!-- Fines -->
+            <div class="section-container" id="fines-container">
+                <h1 class="section-container-header">Fines</h1>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="fines-slut-input">Slut:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="fines-slut-input-min" placeholder="Min"
+                            type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="fines-slut-input-max" placeholder="Max"
+                            type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="fines-slut-input-type" placeholder="Type"
+                            type="search" list="discounttype-list">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="fines-crime-input">Crime:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="fines-crime-input-min" placeholder="Min"
+                            type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="fines-crime-input-max" placeholder="Max"
+                            type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="fines-crime-input-type" placeholder="Type"
+                            type="search" list="discounttype-list">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="fines-rob-input">Rob:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="fines-rob-input-min" placeholder="Min"
+                            type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="fines-rob-input-max" placeholder="Max"
+                            type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="fines-rob-input-type" placeholder="Type"
+                            type="search" list="discounttype-list">
+                    </div>
+                </div>
+                <button class="section-button" id="fines-button-save">Save</button>
+            </div>
+            <!-- Payouts -->
+            <div class="section-container" id="payouts-container">
+                <h1 class="section-container-header">Payouts</h1>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="payouts-work-input-min">Work:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="payouts-work-input-min" placeholder="Min"
+                            type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="payouts-work-input-max" placeholder="Max"
+                            type="number" min="1">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="payouts-slut-input-min">Slut:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="payouts-slut-input-min" placeholder="Min"
+                            type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="payouts-slut-input-max" placeholder="Max"
+                            type="number" min="1">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="payouts-crime-input-min">Crime:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="payouts-crime-input-min" placeholder="Min"
+                            type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="payouts-crime-input-max" placeholder="Max"
+                            type="number" min="1">
+                    </div>
+                </div>
+                <button class="section-button" id="payouts-button-save">Save</button>
+            </div>
+        </div>
+        <div class="section-container-main" id="main-2">
+            <!-- Reply -->
+            <div class="section-container" id="replyeditor-container">
+                <h1 class="section-container-header">Reply Editor</h1>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="reply-editor-command">Command:</label>
+                    </div>
+                    <div class="center-vert container-input-4">
+                        <input class="section-container-container-input" id="reply-editor-command" placeholder="Command"
+                            type="search" list="commands">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="reply-editor-type">Type:</label>
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="reply-editor-type" placeholder="Win/Lose"
+                            type="search" list="types">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="reply-editor-message">Message:</label>
+                    </div>
+                    <div class="center-vert container-input-3">
+                        <input class="section-container-container-input" id="reply-editor-message"
+                            placeholder="Message">
+                    </div>
+                </div>
+                <div class="section-container-container" id="section-container-container-reply-description">
+                    <div class="center-vert container-description">
+                        <p class="section-container-container-description">
+                            For work, slut, and crime your message must contain "﹤money﹥" and "﹤currency﹥". But for rob
+                            your message must contain "﹤user﹥", "﹤money﹥", and "﹤currency﹥".
+                        </p>
+                    </div>
+                </div>
+                <button class="section-button" id="reply-button-create">Create</button>
+            </div>
+            <!-- Reply List -->
+            <div class="section-container" id="replylist-container">
+                <h1 class="section-container-header">Reply List</h1>
+                <ul class="section-container-list" id="section-container-list-reply"></ul>
+            </div>
+        </div>
+        <div class="section-container-main" id="main-3">
+            <!-- Shop Item Editor -->
+            <div class="section-container" id="shopitemeditor-container">
+                <h1 class="section-container-header">Shop Item Editor</h1>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="shopitem-editor-name">Name:</label>
+                    </div>
+                    <div class="center-vert container-input-3">
+                        <input class="section-container-container-input" id="shopitem-editor-name" placeholder="Name">
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="shopitem-editor-description">Description:</label>
+                    </div>
+                    <div class="center-vert container-input-3">
+                        <input class="section-container-container-input" id="shopitem-editor-description"
+                            placeholder="Description">
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="shopitem-editor-price">Price:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="shopitem-editor-price" placeholder="1"
+                            type="number" min="1">
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="shopitem-editor-moneyrequired">Money
+                            Required:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="shopitem-editor-moneyrequired"
+                            placeholder="0" min="0" type="number">
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="shopitem-editor-rolerequired">Role
+                            Required:</label>
+                    </div>
+                    <div class="center-vert container-input-3">
+                        <input class="section-container-container-input" id="shopitem-editor-rolerequired"
+                            placeholder="Role" type="search" list="role-list">
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="shopitem-editor-stock">Stock:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="shopitem-editor-stock" placeholder="0"
+                            min="0" type="number">
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="shopitem-editor-overstock">Overstock:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="shopitem-editor-overstock" placeholder="0"
+                            min="0" type="number">
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="shopitem-editor-overtsockpricemult">Overstock Price Mult:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="shopitem-editor-overstockpricemult"
+                            placeholder="1" type="number" min="1">
+                    </div>
+                </div>
+                <button class="section-button" id="shopitem-button-create">Create</button>
+
+            </div>
+            <!-- Shop Items List -->
+            <div class="section-container" id="shopitems-container">
+                <h1 class="section-container-header">Shop Items</h1>
+                <ul class="section-container-list" id="section-container-list-shopitems"></ul>
+            </div>
+        </div>
+        <div class="section-container-main" id="main-4">
+            <!-- Win Rates -->
+            <div class="section-container" id="winrates-container">
+                <h1 class="section-container-header">Win Rates</h1>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="winrates-slut-input">Slut:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="winrates-slut-input" placeholder="Win %"
+                            type="number" min="1" max="100">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="winrates-crime-input">Crime:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="winrates-crime-input" placeholder="Win %"
+                            type="number" min="1" max="100">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="winrates-rob-input">Rob:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="winrates-rob-input" placeholder="Win %"
+                            type="number" min="1" max="100">
+                    </div>
+                </div>
+                <button class="section-button" id="winrates-button-save">Save</button>
+            </div>
+            <!-- Other -->
+            <div class="section-container" id="other-container">
+                <h1 class="section-container-header">Other</h1>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="other-credit-input">Enable Credit:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <div class="slider-container" id="slider-container-credit">
+                            <div class="center-vert center-slider-rail">
+                                <span class="slider-container-rail" id="slider-container-rail-credit">
+                                </span>
+                                <span class="slider-container-slider glowRed" id="slider-container-slider-credit">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="other-rob-input">Enable Rob:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <div class="slider-container" id="slider-container-rob">
+                            <div class="center-vert center-slider-rail">
+                                <span class="slider-container-rail" id="slider-container-rail-rob">
+                                </span>
+                                <span class="slider-container-slider glowRed" id="slider-container-slider-rob">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="other-maxbalance-input">Max
+                            Balance:</label>
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="other-maxbalance-input" placeholder="1000"
+                            min="0" type="number">
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="other-startingbalance-input">Starting
+                            Balance:</label>
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="other-startingbalance-input"
+                            placeholder="0" min="0" type="number">
+                    </div>
+                </div>
+                <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="other-currency-input">Currency:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="other-currency-input" placeholder="💵">
+                    </div>
+                </div>
+                <!-- <div class="section-container-container-2">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="other-audit-input">Money Audit:</label>
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="other-audit-input" placeholder="Channel"
+                            type="search" list="channel-list">
+                    </div>
+                </div> -->
+                <button class="section-button" id="other-button-save">Save</button>
+            </div>
+            <!-- Recurrences -->
+            <div class="section-container" id="recurrences-container">
+                <h1 class="section-container-header">Recurrences</h1>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="recurrences-payout-input">Payout:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="recurrences-payoutamount-input"
+                            placeholder="$" type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="recurrences-payoutintervalamount-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="recurrences-payoutintervaltype-input"
+                            placeholder="Interval" type="search" list="time-units">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="recurrences-tax-input">Tax:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="recurrences-taxamount-input"
+                            placeholder="$" type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="recurrences-taxintervalamount-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="recurrences-taxintervaltype-input"
+                            placeholder="Interval" type="search" list="time-units">
+                    </div>
+                </div>
+                <button class="section-button" id="recurrences-button-save">Save</button>
+            </div>
+        </div>
+        <div class="section-container-main" id="main-5">
+            <!-- Server Coupon Editor -->
+            <div class="section-container" id="servercouponeditor-container">
+                <h1 class="section-container-header">Shop Coupon Editor</h1>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="servercouponeditor-discounttype-input">Discount Name:</label>
+                    </div>
+                    <div class="center-vert container-input-3">
+                        <input class="section-container-container-input" id="servercouponeditor-discountname-input"
+                            placeholder="Name">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="servercouponeditor-discountamount-input">Discount Amount:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="servercouponeditor-discountamount-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="servercouponeditor-discounttype-input"
+                            placeholder="Type" type="search" list="discounttype-list">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="servercouponeditor-requireditems-input">Items needed:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="servercouponeditor-requireditems-input"
+                            placeholder="Amount" type="number" min="0">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="servercouponeditor-requireditems-input">Expires:</label>
+                    </div>
+                    <div class="center-vert container-input-4">
+                        <input class="section-container-container-input" id="servercouponeditor-expirationdate-input"
+                            placeholder="Amount" type="date">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="servercouponeditor-maxitems-input">Max
+                            Items:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="servercouponeditor-maxitems-input"
+                            placeholder="Amount" type="number" , min="1">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="servercouponeditor-maxuses-input">Max
+                            Uses:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="servercouponeditor-maxuses-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="servercouponeditor-maxusestype-input"
+                            placeholder="Type" type="search" list="usetype-list">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="servercouponeditor-rolerequired-input">Role Needed:</label>
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="servercouponeditor-rolerequired-input"
+                            placeholder="Role" type="search" list="role-list">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="servercouponeditor-description-input">Description:</label>
+                    </div>
+                    <div class="center-vert container-input-3">
+                        <input class="section-container-container-input" id="servercouponeditor-description-input"
+                            placeholder="Text" type="text">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="servercouponeditor-alloweditems-input">Allowed Items:</label>
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="servercouponeditor-alloweditems-input"
+                            placeholder="Item1,Item2,..." type="text">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="servercouponeditor-requiredcost-input">Required Cost:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="servercouponeditor-requiredcost-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="servercouponeditor-totaluses-input">Total
+                            Uses:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="servercouponeditor-totaluses-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                </div>
+                <button class="section-button" id="servercouponeditor-button-save">Create</button>
+            </div>
+            <!-- Server Coupon List -->
+            <div class="section-container" id="servercoupons-container">
+                <h1 class="section-container-header">Shop Coupons</h1>
+                <ul class="section-container-list" id="section-container-list-servercoupons"></ul>
+            </div>
+        </div>
+        <div class="section-container-main" id="main-6">
+            <!-- Server Sale Editor -->
+            <div class="section-container" id="serversaleeditor-container">
+                <h1 class="section-container-header">Shop Sale Editor</h1>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="serversaleeditor-discounttype-input">Discount Name:</label>
+                    </div>
+                    <div class="center-vert container-input-3">
+                        <input class="section-container-container-input" id="serversaleeditor-discountname-input"
+                            placeholder="Name">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="serversaleeditor-discountamount-input">Discount Amount:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="serversaleeditor-discountamount-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="serversaleeditor-discounttype-input"
+                            placeholder="Type" type="search" list="discounttype-list">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="serversaleeditor-requireditems-input">Items needed:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="serversaleeditor-requireditems-input"
+                            placeholder="Amount" type="number" min="0">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="serversaleeditor-requireditems-input">Expires:</label>
+                    </div>
+                    <div class="center-vert container-input-4">
+                        <input class="section-container-container-input" id="serversaleeditor-expirationdate-input"
+                            placeholder="Amount" type="date">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="serversaleeditor-maxitems-input">Max
+                            Items:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="serversaleeditor-maxitems-input"
+                            placeholder="Amount" type="number" , min="1">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="serversaleeditor-maxuses-input">Max
+                            Uses:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="serversaleeditor-maxuses-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="serversaleeditor-maxusestype-input"
+                            placeholder="Type" type="search" list="usetype-list">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="serversaleeditor-rolerequired-input">Role
+                            Needed:</label>
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="serversaleeditor-rolerequired-input"
+                            placeholder="Role" type="search" list="role-list">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="serversaleeditor-description-input">Description:</label>
+                    </div>
+                    <div class="center-vert container-input-3">
+                        <input class="section-container-container-input" id="serversaleeditor-description-input"
+                            placeholder="Text" type="text">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="serversaleeditor-alloweditems-input">Allowed Items:</label>
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="serversaleeditor-alloweditems-input"
+                            placeholder="Item1,Item2,..." type="text">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="serversaleeditor-requiredcost-input">Required Cost:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="serversaleeditor-requiredcost-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                </div>
+                <div class="section-container-container-3">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="serversaleeditor-totaluses-input">Total
+                            Uses:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="serversaleeditor-totaluses-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                </div>
+                <button class="section-button" id="serversaleeditor-button-save">Create</button>
+            </div>
+            <!-- Server Sale List -->
+            <div class="section-container" id="serversales-container">
+                <h1 class="section-container-header">Shop Sales</h1>
+                <ul class="section-container-list" id="section-container-list-serversales"></ul>
+            </div>
+        </div>
+        <div class="section-container-main" id="main-7">
+            <!-- Member Shops -->
+            <div class="section-container" id="membershops-container">
+                <h1 class="section-container-header">Member Shops</h1>
+                <ul class="section-container-list-membershop" id="section-container-list-membershops"></ul>
+            </div>
+            <!-- Member Shop Info -->
+            <div class="section-container" id="membershopsinfo-container">
+                <h1 class="section-container-header">Member Shops Info</h1>
+                <div class="section-container-container-5">
+                    <div class="section-container-container-4">
+                        <div class="section-container-container">
+                            <div class="center-vert">
+                                <label class="section-container-container-label"
+                                    for="membershopsinfo-shopname-input">Name:</label>
+                            </div>
+                            <div class="center-vert container-input-4">
+                                <h2 class="section-container-container-input" id="membershopsinfo-shopname-input"></h2>
+                            </div>
+                        </div>
+                        <div class="section-container-container">
+                            <div class="center-vert">
+                                <label class="section-container-container-label"
+                                    for="membershopsinfo-owner-input">Owner:</label>
+                            </div>
+                            <div class="center-vert container-input-4">
+                                <h2 class="section-container-container-input" id="membershopsinfo-owner-input"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-container-container-4" id="membershopitems-container">
+                        <h1 class="section-container-header">Items</h1>
+                        <ul class="section-container-list-membershopitems" id="section-container-list-membershopitems">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Member Shop Item Info -->
+                <div class="section-container-container-6" id="section-container-container-membershopsiteminfo">
+                    <h1 class="section-container-header">Item Info</h1>
+                    <div class="section-container-container-membershopsiteminfo">
+                        <div class="section-container-container-membershopsiteminfo-section">
+                            <div class="section-container-container-membershopsiteminfo-section-split">
+                                <div class="center-vert">
+                                    <label class="section-container-container-label"
+                                        for="membershopsiteminfo-shopname-input">Name:</label>
+                                </div>
+                                <div class="center-vert membershopsiteminfo-value">
+                                    <h2 class="section-container-container-input"
+                                        id="membershopsiteminfo-shopname-input">
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="section-container-container-membershopsiteminfo-section-split">
+                                <div class="center-vert">
+                                    <label class="section-container-container-label"
+                                        for="membershopsiteminfo-price-input">Price:</label>
+                                </div>
+                                <div class="center-vert membershopsiteminfo-value">
+                                    <h2 class="section-container-container-input" id="membershopsiteminfo-price-input"
+                                        placeholder="Amount" type="number" min="1"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-container-container-membershopsiteminfo-section" id="description-section">
+                            <div class="section-container-container-membershopsiteminfo-section-split"
+                                id="section-container-container-membershopsiteminfo-section-split-description">
+                                <div class="center-vert">
+                                    <label class="section-container-container-label"
+                                        for="membershopsiteminfo-description-input">Description:</label>
+                                </div>
+                                <div class="section-container-container-input-container"
+                                    id="membershopsiteminfo-description">
+                                    <p class="section-container-container-input-text"
+                                        id="membershopsiteminfo-description-input">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-container-container-membershopsiteminfo-section">
+                            <div class="section-container-container-membershopsiteminfo-section-split">
+                                <div class="center-vert">
+                                    <label class="section-container-container-label"
+                                        for="membershopsiteminfo-moneyrequired-input">Money Needed:</label>
+                                </div>
+                                <div class="center-vert membershopsiteminfo-value">
+                                    <h2 class="section-container-container-input"
+                                        id="membershopsiteminfo-moneyrequired-input" placeholder="Amount" type="number"
+                                        min="1"></h2>
+                                </div>
+                            </div>
+                            <div class="section-container-container-membershopsiteminfo-section-split">
+                                <div class="center-vert">
+                                    <label class="section-container-container-label"
+                                        for="membershopsiteminfo-rolerequired-input">Role Needed:</label>
+                                </div>
+                                <div class="center-vert membershopsiteminfo-value">
+                                    <h2 class="section-container-container-input"
+                                        id="membershopsiteminfo-rolerequired-input" placeholder="Role" type="search"
+                                        list="role-list"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-container-container-membershopsiteminfo-section">
+                            <div class="section-container-container-membershopsiteminfo-section-split">
+                                <div class="center-vert">
+                                    <label class="section-container-container-label"
+                                        for="membershopsiteminfo-stock-input">Stock:</label>
+                                </div>
+                                <div class="center-vert membershopsiteminfo-value">
+                                    <h2 class="section-container-container-input" id="membershopsiteminfo-stock-input"
+                                        placeholder="Amount" type="number" min="0"></h2>
+                                </div>
+                            </div>
+                            <div class="section-container-container-membershopsiteminfo-section-split">
+                                <div class="center-vert">
+                                    <label class="section-container-container-label"
+                                        for="membershopsiteminfo-overstock-input">Overstock:</label>
+                                </div>
+                                <div class="center-vert membershopsiteminfo-value">
+                                    <h2 class="section-container-container-input"
+                                        id="membershopsiteminfo-overstock-input" placeholder="Amount" type="number"
+                                        min="0"></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iteminfo-button-close x-button" id="iteminfo-button-close-membershops">
+                        <div class="x-button-bar" id="x-button-bar-top">
+                        </Div>
+                        <div class="x-button-bar" id="x-button-bar-bottom"></Div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-container-main" id="main-8">
+            <!-- Member Coupons -->
+            <div class="section-container" id="membercoupons-container">
+                <h1 class="section-container-header">Member Shop Coupons</h1>
+                <ul class="section-container-list" id="section-container-list-membercoupons"></ul>
+            </div>
+            <!-- Member Sales -->
+            <div class="section-container" id="membersales-container">
+                <h1 class="section-container-header">Member Shop Sales</h1>
+                <ul class="section-container-list" id="section-container-list-membersales"></ul>
+            </div>
+        </div>
+        <div class="section-container-main" id="main-9">
+            <!-- Money Role Editor -->
+            <div class="section-container" id="moneyroleeditor-container">
+                <h1 class="section-container-header">Money Role Editor</h1>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label" for="moneyroleeditor-role-input">Role:</label>
+                    </div>
+                    <div class="center-vert container-input-4">
+                        <input class="section-container-container-input" id="moneyroleeditor-role-input"
+                            placeholder="Role" type="search" list="role-list">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="moneyroleeditor-periodtime-input">Period:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="moneyroleeditor-periodtime-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                    <div class="center-vert container-input-2">
+                        <input class="section-container-container-input" id="moneyroleeditor-periodtype-input"
+                            placeholder="Type" type="search" list="time-units">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="moneyroleeditor-amount-input">Amount:</label>
+                    </div>
+                    <div class="center-vert container-input">
+                        <input class="section-container-container-input" id="moneyroleeditor-amount-input"
+                            placeholder="Amount" type="number" min="1">
+                    </div>
+                </div>
+                <div class="section-container-container">
+                    <div class="center-vert">
+                        <label class="section-container-container-label"
+                            for="moneyroleeditor-account-input">Account:</label>
+                    </div>
+                    <div class="center-vert container-input-4">
+                        <input class="section-container-container-input" id="moneyroleeditor-account-input"
+                            placeholder="Account" type="search" list="account-list">
+                    </div>
+                </div>
+                <button class="section-button" id="moneyroleeditor-button-save">Create</button>
+            </div>
+            <!-- Money Roles List -->
+            <div class="section-container" id="moneyroles-container">
+                <h1 class="section-container-header">Money Roles</h1>
+                <ul class="section-container-list" id="section-container-list-moneyroles"></ul>
+            </div>
+        </div>
+        <div class="section-container-main" id="main-10">
+            <!-- Loans -->
+            <div class="section-container" id="loans-container">
+                <h1 class="section-container-header">Loans</h1>
+                <ul class="section-container-list" id="section-container-list-loans"></ul>
+            </div>
+        </div>
+        <!-- End of page code -->
+    </div>
+    <div class="error-container" id="error-container">
+        <h1 class="error-message" id="error-message">
+            Error
+        </h1>
+    </div>
+    <div class="success-popup" id="success-popup">
+        <div class="success-popup-bar" id="success-popup-bar"></div>
+        <div class=" success-popup-image-container">
+            <img class="success-popup-image" src="../images/check-solid.svg">
+        </div>
+        <div class=" success-popup-words-container">
+            <h2 class="success-popup-words">
+                Your changes have been saved!
+            </h2>
+        </div>
+    </div>
+    <div class="body-dropdown-menu-cover" id="body-dropdown-menu-cover"></div>
+</body>
+<header class="header">
+    <div class="header-section" id="header-section-back">
+        <img src="../images/arrow-left-solid.svg" class="header-section-arrow" id="header-section-arrow-back">
+    </div>
+    <div class="header-section" id="header-section-profile">
+        <button class="header-button" id="header-button-profile">
+            <img class="header-profile-icon" id="header-profile-icon" src="../images/discord icon.png">
+        </button>
+        <div class="header-profile-dropdown-menu" id="header-profile-dropdown-menu">
+            <div class="header-profile-dropdown-menu-button" id="header-profile-dropdown-menu-button-close">
+                <Div class="header-profile-dropdown-menu-button-bar" id="header-profile-dropdown-menu-button-bar-top">
+                </Div>
+                <Div class="header-profile-dropdown-menu-button-bar"
+                    id="header-profile-dropdown-menu-button-bar-bottom"></Div>
+            </div>
+            <ul class="header-profile-dropdown-menu-list" id="header-profile-dropdown-menu-list">
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-home">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-home">
+                        Home
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-servers">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-servers">
+                        My Servers
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-premium-management">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-premium-management">
+                        Premium Management
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-support-server">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-support-server">
+                        Support Server
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Page loader -->
+
+<div class="loader-container" id="loader-container">
+    <!-- Bot Image -->
+    <div class="loader-icon-container" id="loader-icon-container">
+        <img src="../images/gods eye loader.gif" class="loader-icon-animation" id="loader-icon-animation">
+    </div>
+</div>
+
+</html>

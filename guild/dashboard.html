@@ -1,0 +1,550 @@
+<!-- Base HTML starter kit -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <meta>
+    <link rel="styleSheet" href="../CSS/basicGuildPage-styles.css" />
+    <link rel="styleSheet" href="../CSS/dashboard-styles.css" />
+    <link rel="body-background" href="../images/Dekkah_Throne_Room_Output_001.png">
+    <link rel="icon" type="image/png" href="../images/discord icon.png">
+    <!-- Script -->
+    <script src="../JS/profileButton-script.js" type="module"></script>
+    <script src="../JS/dashboard-script.js" type="module"></script>
+</head>
+
+<!-- Body -->
+
+<body class="body" id="body">
+    <!-- Body container to use blur effect -->
+    <div class="body-container" id="body-container">
+        <!-- Modules -->
+        <ul class="body-modules-activity-list" id="body-modules-activity-list">
+
+        </ul>
+        <!-- Side menu -->
+        <div class="body-side-menu" id="body-side-menu">
+            <!-- Body side menu Logo -->
+            <!-- <div class="body-side-menu-section" id="body-side-menu-section-branding">
+                <div class="body-side-menu-subsection" id="body-side-menu-subsection-icon">
+                    <img src="../images/discord icon.png" alt="Gods Eye Icon" class="body-side-menu-icon"
+                        id="body-side-menu-icon">
+                </div> -->
+            <!-- Body side menu divider -->
+            <!-- <div class="body-side-menu-subsection" id="body-side-menu-subsection-divider-1">
+                    <div class="body-side-menu-divider" id="body-side-menu-divider-1">
+                    </div>
+                </div> -->
+            <!-- Body side menu Name -->
+            <!-- <div class="body-side-menu-subsection" id="body-side-menu-subsection-name">
+                    <h1 class="body-side-menu-name-part" id="body-side-menu-name-part-1">
+                        GODS
+                    </h1>
+                    <h1 class="body-side-menu-name-part" id="body-side-menu-name-part-2">
+                        EYE
+                    </h1>
+                </div>
+            </div> -->
+
+            <!-- Guild Selector -->
+            <div class="body-side-menu-section" id="body-side-menu-section-guild-selector">
+                <img src="../images/discord icon.png" class="body-side-menu-guild-selector-icon"
+                    id="body-side-menu-guild-selector-icon">
+                <div class="center-vert body-side-menu-guild-selector-guild-name-center">
+                    <h1 class="body-side-menu-guild-selector-guild-name" id="body-side-menu-guild-selector-guild-name">
+                    </h1>
+                </div>
+                <div class="center-vert body-side-menu-guild-selector-arrow-center">
+                    <div class="body-side-menu-guild-selector-arrow-container">
+                        <div class="body-side-menu-guild-selector-arrow" id="body-side-menu-guild-selector-arrow-down">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-side-menu-section" id="body-side-menu-guild-selector-guilds">
+                <ul class="body-side-menu-guild-selector-guilds-list" id="body-side-menu-guild-selector-guilds-list">
+                </ul>
+            </div>
+            <!-- Side Menu Sections -->
+            <div class="body-side-menu-section" id="body-side-menu-section-module-selection">
+                <ul class="body-side-menu-section-module-selection-main-list"
+                    id="body-side-menu-section-module-selection-main-list">
+                    <li class="body-side-menu-section-module-selection-main-list-item"
+                        id="body-side-menu-section-module-selection-main-list-item-dashboard">
+                        <img src="../images/dash icon.svg" alt="dashboard"
+                            class="body-side-menu-section-module-selection-main-list-item-icon"
+                            id="body-side-menu-section-module-selection-main-list-item-dashboard-icon">
+                        <h1 class="body-side-menu-section-module-selection-main-list-item-h1"
+                            id="body-side-menu-section-module-selection-main-list-item-dashboard-h1">
+                            Dashboard
+                        </h1>
+                    </li>
+                    <li class="body-side-menu-section-module-selection-main-list-item"
+                        id="body-side-menu-section-module-selection-main-list-item-rankboard">
+                        <img src="../images/rankboard icon.svg" alt="rankboard"
+                            class="body-side-menu-section-module-selection-main-list-item-icon"
+                            id="body-side-menu-section-module-selection-main-list-item-rankboard-icon">
+                        <h1 class="body-side-menu-section-module-selection-main-list-item-h1"
+                            id="body-side-menu-section-module-selection-main-list-item-rankboard-h1">
+                            Rankboard
+                        </h1>
+                    </li>
+                    <li class="body-side-menu-section-module-selection-main-list-item"
+                        id="body-side-menu-section-module-selection-main-list-item-premium">
+                        <img src="../images/premium icon.svg" alt="premium"
+                            class="body-side-menu-section-module-selection-main-list-item-icon"
+                            id="body-side-menu-section-module-selection-main-list-item-premium-icon">
+                        <h1 class="body-side-menu-section-module-selection-main-list-item-h1"
+                            id="body-side-menu-section-module-selection-main-list-item-premium-h1">
+                            Premium
+                        </h1>
+                    </li>
+                    <li class="body-side-menu-section-module-selection-secondary-list-item"
+                        id="body-side-menu-section-module-selection-secondary-list-item-server-management">
+                        <h1 class="body-side-menu-section-module-selection-secondary-list-item-h1"
+                            id="body-side-menu-section-module-selection-secondary-list-item-server-management-h1">
+                            Server Management
+                        </h1>
+                        <img src="../images/arrow icon.svg"
+                            class="body-side-menu-section-module-selection-secondary-list-item-arrow"
+                            id="body-side-menu-section-module-selection-secondary-list-item-server-management-arrow">
+                    </li>
+                    <li class="body-side-menu-section-module-selection-secondary-list-item"
+                        id="body-side-menu-section-module-selection-secondary-list-item-server-management-inner">
+                        <ul class="body-side-menu-section-module-selection-secondary-list-item-list"
+                            id="body-side-menu-section-module-selection-secondary-list-item-list-server-management">
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-welcome">
+                                <img src="../images/welcome icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-welcome">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-welcome">
+                                    Welcome
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-custom-commands">
+                                <img src="../images/custom commands icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-custom-commands">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-custom-commands">
+                                    Custom Commands
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-button-roles">
+                                <img src="../images/button role icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-button-roles">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-button-roles">
+                                    Button Roles
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-moderation">
+                                <img src="../images/moderation icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-moderation">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-moderation">
+                                    Moderation
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-invite-tracker">
+                                <img src="../images/invites icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-invite-tracker">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-invite-tracker">
+                                    Invite Tracker
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-gateway">
+                                <img src="../images/gateway icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-gateway">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-gateway">
+                                    Gateway
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-ticket-system">
+                                <img src="../images/ticket icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-ticket-system">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-ticket-system">
+                                    Ticket System
+                                </h1>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!-- <li class="body-side-menu-section-module-selection-secondary-list-item"
+                        id="body-side-menu-section-module-selection-secondary-list-item-monetization">
+                        <h1 class="body-side-menu-section-module-selection-secondary-list-item-h1"
+                            id="body-side-menu-section-module-selection-secondary-list-item-monetization-h1">
+                            Monetization
+                        </h1>
+                        <img src="../images/arrow icon.svg"
+                            class="body-side-menu-section-module-selection-secondary-list-item-arrow"
+                            id="body-side-menu-section-module-selection-secondary-list-item-server-management-arrow">
+                    </li>
+                    <li class="body-side-menu-section-module-selection-secondary-list-item"
+                        id="body-side-menu-section-module-selection-secondary-list-item-monetization-inner">
+                        <ul class="body-side-menu-section-module-selection-secondary-list-item-list"
+                            id="body-side-menu-section-module-selection-secondary-list-item-list-monetization">
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-vip-tiers">
+                                <img src="../images/vip tiers.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-vip-tiers">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-vip-tiers">
+                                    Vip Tiers
+                                </h1>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <li class="body-side-menu-section-module-selection-secondary-list-item"
+                        id="body-side-menu-section-module-selection-secondary-list-item-utilities">
+                        <h1 class="body-side-menu-section-module-selection-secondary-list-item-h1"
+                            id="body-side-menu-section-module-selection-secondary-list-item-utilities-h1">
+                            Utilities
+                        </h1>
+                        <img src="../images/arrow icon.svg"
+                            class="body-side-menu-section-module-selection-secondary-list-item-arrow"
+                            id="body-side-menu-section-module-selection-secondary-list-item-server-management-arrow">
+                    </li>
+                    <li class="body-side-menu-section-module-selection-secondary-list-item"
+                        id="body-side-menu-section-module-selection-secondary-list-item-utilities-inner">
+                        <ul class="body-side-menu-section-module-selection-secondary-list-item-list"
+                            id="body-side-menu-section-module-selection-secondary-list-item-list-utilities">
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-embeds">
+                                <img src="../images/embeds icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-embeds">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-embeds">
+                                    Embeds
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-timers">
+                                <img src="../images/timer icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-timers">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-timers">
+                                    Timers
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-stats">
+                                <img src="../images/stats icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-stats">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-stats">
+                                    Stats
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-temp-channels">
+                                <img src="../images/temp channel icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-temp-channels">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-temp-channels">
+                                    Temp Channels
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-lfg">
+                                <img src="../images/lfg icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-lfg">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-lfg">
+                                    Looking For Group
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-polls">
+                                <img src="../images/polls icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-polls">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-polls">
+                                    Polls
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-suggestions">
+                                <img src="../images/suggestions icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-suggestions">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-suggestions">
+                                    Suggestions
+                                </h1>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!-- <li class="body-side-menu-section-module-selection-secondary-list-item"
+                        id="body-side-menu-section-module-selection-secondary-list-item-connections">
+                        <h1 class="body-side-menu-section-module-selection-secondary-list-item-h1"
+                            id="body-side-menu-section-module-selection-secondary-list-item-connections-h1">
+                            Connections
+                        </h1>
+                        <img src="../images/arrow icon.svg"
+                            class="body-side-menu-section-module-selection-secondary-list-item-arrow"
+                            id="body-side-menu-section-module-selection-secondary-list-item-server-management-arrow">
+                    </li>
+                    <li class="body-side-menu-section-module-selection-secondary-list-item"
+                        id="body-side-menu-section-module-selection-secondary-list-item-connections-inner">
+                        <ul class="body-side-menu-section-module-selection-secondary-list-item-list"
+                            id="body-side-menu-section-module-selection-secondary-list-item-list-connections">
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-twitch">
+                                <img src="../images/twitch.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-twitch">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-twitch">
+                                    Twitch
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-youtube">
+                                <img src="../images/youtube.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-youtube">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-youtube">
+                                    YouTube
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-twitter">
+                                <img src="../images/twitter.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-twitter">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-twitter">
+                                    Twitter
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-instagram">
+                                <img src="../images/instagram.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-instagram">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-instagram">
+                                    Instagram
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-reddit">
+                                <img src="../images/reddit-alien.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-reddit">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-reddit">
+                                    Reddit
+                                </h1>
+                            </li>
+
+                        </ul>
+                    </li> -->
+                    <li class="body-side-menu-section-module-selection-secondary-list-item"
+                        id="body-side-menu-section-module-selection-secondary-list-item-engagement">
+                        <h1 class="body-side-menu-section-module-selection-secondary-list-item-h1"
+                            id="body-side-menu-section-module-selection-secondary-list-item-engagement-h1">
+                            Engagement
+                        </h1>
+                        <img src="../images/arrow icon.svg"
+                            class="body-side-menu-section-module-selection-secondary-list-item-arrow"
+                            id="body-side-menu-section-module-selection-secondary-list-item-engagement-arrow">
+                    </li>
+                    <li class="body-side-menu-section-module-selection-secondary-list-item"
+                        id="body-side-menu-section-module-selection-secondary-list-item-engagement-inner">
+                        <ul class="body-side-menu-section-module-selection-secondary-list-item-list"
+                            id="body-side-menu-section-module-selection-secondary-list-item-list-engagement">
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-ranks">
+                                <img src="../images/ranks icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-ranks">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-ranks">
+                                    Ranks
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-birthdays">
+                                <img src="../images/birthday icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-birthdays">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-birthdays">
+                                    Birthdays
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-economy">
+                                <img src="../images/economy icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-economy">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-economy">
+                                    Economy
+                                </h1>
+                            </li>
+                            <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-giveaways">
+                                <img src="../images/giveaway icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-giveaways">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-giveaways">
+                                    Giveaways
+                                </h1>
+                            </li>
+                            <!-- <li class="body-side-menu-section-module-selection-secondary-list-item-list-item"
+                                id="body-side-menu-section-module-selection-secondary-list-item-list-item-misc">
+                                <img src="../images/misc icon.svg"
+                                    class="body-side-menu-section-module-selection-secondary-list-item-list-item-icon"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-icon-misc">
+                                <h1 class="body-side-menu-section-module-selection-secondary-list-item-list-item-name"
+                                    id="body-side-menu-section-module-selection-secondary-list-item-list-item-name-misc">
+                                    Miscellaneous
+                                </h1>
+                            </li> -->
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <button id="side-menu-toggle">
+        <img src="../images/arrow icon.svg" class="side-menu-toggle-arrow" id="side-menu-toggle-arrow">
+    </button>
+    <div class="error-container" id="error-container">
+        <h1 class="error-message" id="error-message">
+            Error
+        </h1>
+    </div>
+    <div class="success-popup" id="success-popup">
+        <div class="success-popup-bar" id="success-popup-bar"></div>
+        <div class=" success-popup-image-container">
+            <img class="success-popup-image" src="../images/check-solid.svg">
+        </div>
+        <div class=" success-popup-words-container">
+            <h2 class="success-popup-words">
+                Your changes have been saved!
+            </h2>
+        </div>
+    </div>
+    <div class="body-dropdown-menu-cover" id="body-dropdown-menu-cover"></div>
+</body>
+
+<!-- Page header -->
+
+<header class="header">
+    <!-- Header Logo -->
+    <div class="header-section" id="header-section-icon">
+        <img src="../images/discord icon.png" alt="Gods Eye Icon" class="header-icon" id="header-icon">
+    </div>
+
+    <!-- Header divider -->
+    <div class="header-section" id="header-section-divider-1">
+        <div class="header-divider" id="header-divider-1">
+        </div>
+    </div>
+    <!-- Header Name -->
+    <div class="header-section" id="header-section-name">
+        <div class="center-vert" id="header-section-name-center-1">
+            <h1 class="header-name-part" id="header-name-part-1">
+                GODS
+            </h1>
+        </div>
+        <div class="center-vert" id="header-section-name-center-1">
+            <h1 class="header-name-part" id="header-name-part-2">
+                EYE
+            </h1>
+        </div>
+    </div>
+
+    <div class="header-section" id="header-section-profile">
+        <div class="center-vert header-section-profile-center">
+            <button class="header-button" id="header-button-profile">
+                <img class="header-profile-icon" id="header-profile-icon" src="../images/discord icon.png">
+            </button>
+        </div>
+        <div class="header-profile-dropdown-menu" id="header-profile-dropdown-menu">
+            <div class="header-profile-dropdown-menu-button" id="header-profile-dropdown-menu-button-close">
+                <Div class="header-profile-dropdown-menu-button-bar" id="header-profile-dropdown-menu-button-bar-top">
+                </Div>
+                <Div class="header-profile-dropdown-menu-button-bar"
+                    id="header-profile-dropdown-menu-button-bar-bottom"></Div>
+            </div>
+            <ul class="header-profile-dropdown-menu-list" id="header-profile-dropdown-menu-list">
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-home">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-home">
+                        Home
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-servers">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-servers">
+                        My Servers
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-premium-management">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-premium-management">
+                        Premium Management
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-support-server">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-support-server">
+                        Support Server
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+
+<!-- Page loader -->
+
+<div class="loader-container" id="loader-container">
+    <!-- Bot Image -->
+    <div class="loader-icon-container" id="loader-icon-container">
+        <img src="../images/gods eye loader.gif" class="loader-icon-animation" id="loader-icon-animation">
+    </div>
+</div>
+
+</html>

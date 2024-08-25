@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankboard</title>
+    <meta>
+    <link rel="styleSheet" href="../CSS/basicGuildPage-styles.css" />
+    <link rel="styleSheet" href="../CSS/rankboard-styles.css" />
+    <link rel="body-background" href="../images/Dekkah_Throne_Room_Output_001.png">
+    <link rel="icon" type="image/png" href="../images/discord icon.png">
+    <!-- Script -->
+    <script src="../JS/profileButton-script.js" type="module"></script>
+    <script src="../JS/rankboard-script.js" type="module"></script>
+</head>
+
+<body class="body">
+    <div class="body-container" id="body-container">
+        <h1 class="body-rankboard-message-error" id="body-rankboard-message-error-noResults">
+            There are no rank results to show. Make sure the rank module is enabled and send some messages, then check
+            back
+            here for your rankboard.
+        </h1>
+        <ul class="body-rankboard-list" id="body-rankboard-list">
+            <!-- <li class="body-rankboard-list-item" id="body-rankboard-list-item-member">
+                <h1 class="body-rankboard-list-item-name" id="body-rankboard-list-item-name-memberId">
+                    1. Member Username
+                </h1>
+                <h1 class="body-rankboard-list-item-identifier" id="body-rankboard-list-item-identifier-memberId">
+                    #1234
+                </h1>
+                <h1 class="body-rankboard-list-item-xp" id="body-rankboard-list-item-xp-memberId">
+                    6,900 XP
+                </h1>
+                <span class="body-rankboard-list-item-span" id="body-rankboard-list-item-span-memberId"></span>
+            </li>
+            <li class="body-rankboard-list-item" id="body-rankboard-list-item-member">
+                <h1 class="body-rankboard-list-item-name" id="body-rankboard-list-item-name-memberId">
+                    1. Member Username
+                </h1>
+                <h1 class="body-rankboard-list-item-identifier" id="body-rankboard-list-item-identifier-memberId">
+                    #1234
+                </h1>
+                <h1 class="body-rankboard-list-item-xp" id="body-rankboard-list-item-xp-memberId">
+                    6,900 XP
+                </h1>
+                <span class="body-rankboard-list-item-span" id="body-rankboard-list-item-span-memberId"></span>
+                <button class="body-rankboard-list-item-button" id="body-rankboard-list-item-button-memberId">
+                    ⟳ Reset XP
+                </button>
+            </li> -->
+        </ul>
+    </div>
+    <div class="error-container" id="error-container">
+        <h1 class="error-message" id="error-message">
+            Error
+        </h1>
+    </div>
+    <div class="success-popup" id="success-popup">
+        <div class="success-popup-bar" id="success-popup-bar"></div>
+        <div class=" success-popup-image-container">
+            <img class="success-popup-image" src="../images/check-solid.svg">
+        </div>
+        <div class=" success-popup-words-container">
+            <h2 class="success-popup-words">
+                Your changes have been saved!
+            </h2>
+        </div>
+    </div>
+    <div class="body-dropdown-menu-cover" id="body-dropdown-menu-cover"></div>
+</body>
+<header class="header">
+    <div class="header-section" id="header-section-back">
+        <img src="../images/arrow-left-solid.svg" class="header-section-arrow" id="header-section-arrow-back">
+    </div>
+    <div class="header-section" id="header-section-profile">
+        <button class="header-button" id="header-button-profile">
+            <img class="header-profile-icon" id="header-profile-icon" src="../images/discord icon.png">
+        </button>
+        <div class="header-profile-dropdown-menu" id="header-profile-dropdown-menu">
+            <div class="header-profile-dropdown-menu-button" id="header-profile-dropdown-menu-button-close">
+                <Div class="header-profile-dropdown-menu-button-bar" id="header-profile-dropdown-menu-button-bar-top">
+                </Div>
+                <Div class="header-profile-dropdown-menu-button-bar"
+                    id="header-profile-dropdown-menu-button-bar-bottom"></Div>
+            </div>
+            <ul class="header-profile-dropdown-menu-list" id="header-profile-dropdown-menu-list">
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-home">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-home">
+                        Home
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-servers">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-servers">
+                        My Servers
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-premium-management">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-premium-management">
+                        Premium Management
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-support-server">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-support-server">
+                        Support Server
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Page loader -->
+
+<div class="loader-container" id="loader-container">
+    <!-- Bot Image -->
+    <div class="loader-icon-container" id="loader-icon-container">
+        <img src="../images/gods eye loader.gif" class="loader-icon-animation" id="loader-icon-animation">
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,11 @@
+.coming-soon {
+    position: absolute;
+    height: 15%;
+    width: 57%;
+    font-size: calc(((100vh + 100vw)/2)/10);
+    color: white;
+    top: 40%;
+    left: 21.5%;
+    cursor: default;
+    /* border: 2px solid red; */
+}

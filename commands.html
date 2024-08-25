@@ -1,0 +1,193 @@
+<!-- Base HTML starter kit -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gods Eye Commands</title>
+    <meta>
+    <link rel="styleSheet" href="./CSS/basicGuildPage-styles.css" />
+    <link rel="styleSheet" href="./CSS/commands-styles.css" />
+    <link rel="icon" type="image/png" href="./images/discord icon.png">
+    <!-- Script -->
+
+    <script src="./JS/commands-script.js" type="module"></script>
+</head>
+
+<div class="wrapper" id="wrapper">
+    <!-- Body -->
+
+    <body class="body" id="body">
+        <div class="body-container" id="body-container">
+            <datalist id="commandName-list"></datalist>
+            <input class="body-input" id="body-input-search" type="search" list="commandName-list">
+            <button class="body-button" id="body-button-search">Search</button>
+            <ul class="commands-list" id="commands-list"></ul>
+        </div>
+        <div class="body-dropdown-menu-cover" id="body-dropdown-menu-cover"></div>
+    </body>
+    <div class="info">
+        <!-- <div class="info-container">
+            <h2 class="info-container-header">Socials</h2>
+            <div class="info-list-container-vert">
+                <div class="info-list-container-horz">
+                    <ul class="info-list">
+                        <li class="info-list-item">
+                            <a class="info-list-item-link" href="">Twitter</a>
+                        </li>
+                        <li class="info-list-item">
+                            <a class="info-list-item-link"
+                                href="">YouTube</a>
+                        </li>
+                        <li class="info-list-item">
+                            <a class="info-list-item-link" href="">TikTok</a>
+                        </li>
+                        <li class="info-list-item">
+                            <a class="info-list-item-link" href="">Instagram</a>
+                        </li>
+                        <li class="info-list-item">
+                            <a class="info-list-item-link"
+                                href="">Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="info-container">
+            <h2 class="info-container-header">Partners</h2>
+            <div class="info-list-container-vert">
+                <div class="info-list-container-horz">
+                    <ul class="info-list">
+                        <li class="info-list-item">
+                            <a class="info-list-item-link" href="">CSC World</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+        <div class="info-container">
+            <h2 class="info-container-header">Policies</h2>
+            <div class="info-list-container-vert">
+                <div class="info-list-container-horz">
+                    <ul class="info-list">
+                        <li class="info-list-item">
+                            <a class="info-list-item-link"
+                                href="https://godseyeofficial.xyz/policies/online-privacy-policy.pdf">Privacy</a>
+                        </li>
+                        <li class="info-list-item">
+                            <a class="info-list-item-link"
+                                href="https://godseyeofficial.xyz/policies/cookie-policy.pdf">Cookies</a>
+                        </li>
+                        <li class="info-list-item">
+                            <a class="info-list-item-link"
+                                href="https://godseyeofficial.xyz/policies/online-terms-and-conditions.pdf">Terms and
+                                Conditions</a>
+                        </li>
+                        <li class="info-list-item">
+                            <a class="info-list-item-link"
+                                href="https://godseyeofficial.xyz/policies/refund-cancellation-policy.pdf">Refunds and
+                                Cancellations</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page header -->
+
+    <header class="header">
+
+        <!-- Header Logo -->
+        <div class="header-section" id="header-section-icon">
+            <img src="./images/discord icon.png" alt="Gods Eye Icon" class="header-icon" id="header-icon">
+        </div>
+
+        <!-- Header divider -->
+        <div class="header-section" id="header-section-divider-1">
+            <div class="header-divider" id="header-divider-1">
+            </div>
+        </div>
+        <!-- Header Name -->
+        <div class="header-section" id="header-section-name">
+            <div class="center-vert" id="header-section-name-center-1">
+                <h1 class="header-name-part" id="header-name-part-1">
+                    GODS
+                </h1>
+            </div>
+            <div class="center-vert" id="header-section-name-center-1">
+                <h1 class="header-name-part" id="header-name-part-2">
+                    EYE
+                </h1>
+            </div>
+        </div>
+
+        <!-- Header Menu -->
+        <div class="header-menu-container" id="header-menu-container">
+            <div class="header-section" id="header-section-home">
+                <a href="./home" class="header-menu-link" id="header-menu-link-home">
+                    <h2 class="header-menu-link-text" id="header-menu-link-text-home">Home</h2>
+                </a>
+            </div>
+            <div class="header-section" id="header-section-commands">
+                <a href="./commands" class="header-menu-link" id="header-menu-link-commands">
+                    <h2 class="header-menu-link-text" id="header-menu-link-text-commands">Commands</h2>
+                </a>
+            </div>
+            <div class="header-section" id="header-section-divider-2">
+                <div class="header-divider" id="header-divider-2">
+                </div>
+            </div>
+            <div class="header-section" id="header-section-login">
+                <button class="header-button" id="header-button-login">
+                    Log In
+                </button>
+            </div>
+        </div>
+        <!-- Header Menu Dropdown -->
+        <div class="header-section" id="header-section-dropdown">
+            <button class="header-dropdown-button" id="header-dropdown-button">
+                <div class="hamburger-peice" id="hamburger-peice-1">
+
+                </div>
+            </button>
+            <div class="header-dropdown-menu" id="header-dropdown-menu">
+                <ul class="header-dropdown-menu-list" id="header-dropdown-menu-list">
+                    <li class="header-dropdown-menu-list-item" id="header-dropdown-menu-list-item-home">
+                        <button class="header-dropdown-menu-list-item-button"
+                            id="header-dropdown-menu-list-item-button-home">
+                            Home
+                        </button>
+                    </li>
+                    <!-- <li class="header-dropdown-menu-list-item" id="header-dropdown-menu-list-item-support-commands">
+                    <button class="header-dropdown-menu-list-item-button"
+                        id="header-dropdown-menu-list-item-button-commands">
+                        Commands
+                    </button>
+                </li> -->
+                    <li class="header-dropdown-menu-list-item" id="header-dropdown-menu-list-item-support-login">
+                        <button class="header-dropdown-menu-list-item-button"
+                            id="header-dropdown-menu-list-item-button-login">
+                            Log In
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Page loader -->
+
+    <div class="loader-container" id="loader-container">
+        <!-- Bot Image -->
+        <div class="loader-icon-container" id="loader-icon-container">
+            <img src="./images/gods eye loader.gif" class="loader-icon-animation" id="loader-icon-animation">
+        </div>
+    </div>
+</div>
+
+</html>

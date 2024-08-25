@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invite Tracker</title>
+    <meta>
+    <link rel="styleSheet" href="../CSS/basicGuildPage-styles.css" />
+    <link rel="styleSheet" href="../CSS/invite-tracker-styles.css" />
+    <link rel="body-background" href="../images/Dekkah_Throne_Room_Output_001.png">
+    <link rel="icon" type="image/png" href="../images/discord icon.png">
+    <!-- Script -->
+    <script src="../JS/profileButton-script.js" type="module"></script>
+    <script src="../JS/invite-tracker-script.js" type="module"></script>
+</head>
+
+<body class="body">
+    <div class="body-container" id="body-container">
+        <!-- Start of page code -->
+        <!-- Inite rewards, settings (invite channel, pause invites, invite manager, person manager, invite role manager), leaderboard -->
+        <div class="body-section-container">
+            <div class="body-section" id="body-section-leaderboard">
+                <h1 class="body-section-header" id="body-section-header-leaderboard">Leaderboard</h1>
+                <h2 class="body-section-subheader" id="body-section-subheader-search">Search:</h2>
+                <datalist id="member-list"></datalist>
+                <input type="search" class="body-section-input" id="body-section-input-search" list="member-list">
+                <button class="body-section-button" id="body-section-button-search">Find</button>
+                <ul class="body-section-list" id="body-section-list-leaderboard"></ul>\
+                <button class="body-section-button" id="body-section-button-sync">Sync</button>
+            </div>
+            <div class="body-section" id="body-section-rewards">
+                <h1 class="body-section-header" id="body-section-header-rewards">Rewards</h1>
+                <ul class="body-section-list" id="body-section-list-rewards"></ul>
+                <h2 class="body-section-subheader" id="body-section-subheader-invites">Invites</h2>
+                <input type="number" class="body-section-input" id="body-section-input-invites" min="0">
+                <h2 class="body-section-subheader" id="body-section-subheader-roles">Roles</h2>
+                <datalist id="role-list"></datalist>
+                <input type="search" class="body-section-input" id="body-section-input-roles" list="role-list">
+                <ul class="body-section-list-roles" id="body-section-list-roles"></ul>
+                <button class="body-section-button" id="body-section-button-create">Create</button>
+            </div>
+            <div class="body-section" id="body-section-settings">
+                <h1 class="body-section-header" id="body-section-header-settings">Settings</h1>
+                <div class="body-section-subsection" id="body-section-subsection-inviteChannel">
+                    <h2 class="body-section-subsection-subheader" id="body-section-subsection-subheader-inviteChannel">
+                        Invite Channel</h2>
+                    <datalist id="inviteChannel-list"></datalist>
+                    <input class="body-section-subsection-input" id="body-section-subsection-input-channel"
+                        list="inviteChannel-list">
+                    <button class="body-section-subsection-button"
+                        id="body-section-subsection-button-channel">Save</button>
+                </div>
+                <div class="body-section-subsection" id="body-section-subsection-inviteManager">
+                    <h2 class="body-section-subsection-subheader" id="body-section-subsection-subheader-inviteManager">
+                        Invite Manager</h2>
+                    <button class="body-section-subsection-button" id="body-section-subsection-button-deleteAll">Delete
+                        All</button>
+                    <!-- <button class="body-section-subsection-button" id="body-section-subsection-button-pauseAll">Pause
+                        All</button> -->
+                    <ul class="body-section-subsection-list" id="body-section-subsection-list-inviteManager">
+                    </ul>
+                </div>
+                <div class="body-section-subsection" id="body-section-subsection-personManager">
+                    <h2 class="body-section-subsection-subheader" id="body-section-subsection-subheader-personManager">
+                        Person Manager</h2>
+                    <ul class="body-section-subsection-list" id="body-section-subsection-list-personManager"></ul>
+                    <h2 class="body-section-subsection-subheader" id="body-section-subsection-subheader-bonusInvites">
+                        Bonus Invites</h2>
+                    <input class="body-section-subsection-input" id="body-section-subsection-input-bonusInvites"
+                        type="number" min="0">
+                    <button class="body-section-subsection-button"
+                        id="body-section-subsection-button-bonusInvites">Save</button>
+                    <h2 class="body-section-subsection-subheader" id="body-section-subsection-subheader-memberSearch">
+                        Member Search</h2>
+                    <datalist id="bonusInviteMember-list"></datalist>
+                    <input class="body-section-subsection-input" id="body-section-subsection-input-memberSearch"
+                        type="search" list="bonusInviteMember-list">
+                    <button class="body-section-subsection-button"
+                        id="body-section-subsection-button-memberSearch">Search</button>
+                </div>
+                <div class="body-section-subsection" id="body-section-subsection-inviteRoleManager">
+                    <h2 class="body-section-subsection-subheader"
+                        id="body-section-subsection-subheader-inviteRoleManager">
+                        Invite Role Manager</h2>
+                    <ul class="body-section-subsection-list" id="body-section-subsection-list-inviteRoleManager"></ul>
+                    <h2 class="body-section-subsection-subheader" id="body-section-subsection-subheader-inviteCode">
+                        Invite Code</h2>
+                    <datalist id="inviteCodes-list"></datalist>
+                    <input class="body-section-subsection-input" id="body-section-subsection-input-inviteCode"
+                        list="inviteCodes-list">
+                    <h2 class="body-section-subsection-subheader" id="body-section-subsection-subheader-inviteRoles">
+                        Roles</h2>
+                    <datalist id="inviteRoles-list"></datalist>
+                    <input class="body-section-subsection-input" id="body-section-subsection-input-inviteRoles"
+                        list="inviteRoles-list">
+                    <button class="body-section-subsection-button"
+                        id="body-section-subsection-button-inviteRoleManager">Create</button>
+                    <ul class="body-section-subsection-list" id="body-section-subsection-list-activeCodeRoles"></ul>
+                </div>
+            </div>
+        </div>
+        <!-- End of page code -->
+    </div>
+    <div class="error-container" id="error-container">
+        <h1 class="error-message" id="error-message">
+            Error
+        </h1>
+    </div>
+    <div class="success-popup" id="success-popup">
+        <div class="success-popup-bar" id="success-popup-bar"></div>
+        <div class=" success-popup-image-container">
+            <img class="success-popup-image" src="../images/check-solid.svg">
+        </div>
+        <div class=" success-popup-words-container">
+            <h2 class="success-popup-words">
+                Your changes have been saved!
+            </h2>
+        </div>
+    </div>
+    <div class="success-popup" id="success-popup-sync">
+        <div class="success-popup-bar" id="success-popup-bar-sync"></div>
+        <div class=" success-popup-image-container">
+            <img class="success-popup-image" src="../images/check-solid.svg">
+        </div>
+        <div class=" success-popup-words-container">
+            <h2 class="success-popup-words">
+                Your information has been synced and updated!
+            </h2>
+        </div>
+    </div>
+    <div class="body-dropdown-menu-cover" id="body-dropdown-menu-cover"></div>
+</body>
+<header class="header">
+    <div class="header-section" id="header-section-back">
+        <img src="../images/arrow-left-solid.svg" class="header-section-arrow" id="header-section-arrow-back">
+    </div>
+    <div class="header-section" id="header-section-profile">
+        <button class="header-button" id="header-button-profile">
+            <img class="header-profile-icon" id="header-profile-icon" src="../images/discord icon.png">
+        </button>
+        <div class="header-profile-dropdown-menu" id="header-profile-dropdown-menu">
+            <div class="header-profile-dropdown-menu-button" id="header-profile-dropdown-menu-button-close">
+                <Div class="header-profile-dropdown-menu-button-bar" id="header-profile-dropdown-menu-button-bar-top">
+                </Div>
+                <Div class="header-profile-dropdown-menu-button-bar"
+                    id="header-profile-dropdown-menu-button-bar-bottom"></Div>
+            </div>
+            <ul class="header-profile-dropdown-menu-list" id="header-profile-dropdown-menu-list">
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-home">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-home">
+                        Home
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-servers">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-servers">
+                        My Servers
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-premium-management">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-premium-management">
+                        Premium Management
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-support-server">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-support-server">
+                        Support Server
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Page loader -->
+
+<div class="loader-container" id="loader-container">
+    <!-- Bot Image -->
+    <div class="loader-icon-container" id="loader-icon-container">
+        <img src="../images/gods eye loader.gif" class="loader-icon-animation" id="loader-icon-animation">
+    </div>
+</div>
+
+</html>

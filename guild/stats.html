@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <meta>
+    <link rel="styleSheet" href="../CSS/basicGuildPage-styles.css" />
+    <link rel="styleSheet" href="../CSS/stats-styles.css" />
+    <link rel="body-background" href="../images/Dekkah_Throne_Room_Output_001.png">
+    <link rel="icon" type="image/png" href="../images/discord icon.png">
+    <!-- Script -->
+    <script src="../JS/profileButton-script.js" type="module"></script>
+    <script src="../JS/stats-script.js" type="module"></script>
+</head>
+
+<body class="body">
+    <div class="body-container" id="body-container">
+        <!-- Start of page code -->
+        <div class="stat-options-container" id="stat-options-container">
+            <!-- Member tracker -->
+            <div class="stat-options-option" id="stat-options-option">
+                <div class="stat-options-option-section-header"
+                    id="stat-options-option-section-member-header-container">
+                    <h1 class="stat-options-option-section-header-text" id="stat-options-option-section-member-header">
+                        Server Members
+                    </h1>
+                </div>
+                <div class="stat-options-option-section-description"
+                    id="stat-options-option-section-member-description-container">
+                    <p class="stat-options-option-section-description-text"
+                        id="stat-options-option-section-member-description">
+                        Track how many members are currently on the server minus the bots.
+                    </p>
+                </div>
+                <div class="stat-options-option-section-status"
+                    id="stat-options-option-section-member-status-container">
+                    <label for="stat-options-option-section-member-status" class="stat-options-option-section-label"
+                        id="stat-options-option-section-member-status-label">
+                        Status:
+                    </label>
+                    <div class="stat-options-option-section-label-switch-container"
+                        id="stat-options-option-section-member-status-switch-container">
+                        <span class="stat-options-option-section-label-switch-slider"
+                            id="stat-options-option-section-member-status-switch-slider">
+                            <h1 class="stat-options-option-section-label-switch-slider-text"
+                                id="stat-options-option-section-member-label-switch-slider-text">Inactive</h1>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Birth tracker -->
+            <div class="stat-options-option" id="stat-options-option">
+                <div class="stat-options-option-section-header" id="stat-options-option-section-birth-header-container">
+                    <h1 class="stat-options-option-section-header-text" id="stat-options-option-section-birth-header">
+                        Server Birth
+                    </h1>
+                </div>
+                <div class="stat-options-option-section-description"
+                    id="stat-options-option-section-birth-description-container">
+                    <p class="stat-options-option-section-description-text"
+                        id="stat-options-option-section-birth-description">
+                        Display the date the server was created.
+                    </p>
+                </div>
+                <div class="stat-options-option-section-status" id="stat-options-option-section-birth-status-container">
+                    <label for="stat-options-option-section-birth-status" class="stat-options-option-section-label"
+                        id="stat-options-option-section-birth-status-label">
+                        Status:
+                    </label>
+                    <div class="stat-options-option-section-label-switch-container"
+                        id="stat-options-option-section-birth-status-switch-container">
+                        <span class="stat-options-option-section-label-switch-slider"
+                            id="stat-options-option-section-birth-status-switch-slider">
+                            <h1 class="stat-options-option-section-label-switch-slider-text"
+                                id="stat-options-option-section-birth-label-switch-slider-text">Inactive</h1>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Owner tracker -->
+            <div class="stat-options-option" id="stat-options-option">
+                <div class="stat-options-option-section-header" id="stat-options-option-section-owner-header-container">
+                    <h1 class="stat-options-option-section-header-text" id="stat-options-option-section-owner-header">
+                        Server Owner
+                    </h1>
+                </div>
+                <div class="stat-options-option-section-description"
+                    id="stat-options-option-section-owner-description-container">
+                    <p class="stat-options-option-section-description-text"
+                        id="stat-options-option-section-owner-description">
+                        Display the current server owner.
+                    </p>
+                </div>
+                <div class="stat-options-option-section-status" id="stat-options-option-section-owner-status-container">
+                    <label for="stat-options-option-section-owner-status" class="stat-options-option-section-label"
+                        id="stat-options-option-section-owner-status-label">
+                        Status:
+                    </label>
+                    <div class="stat-options-option-section-label-switch-container"
+                        id="stat-options-option-section-owner-status-switch-container">
+                        <span class="stat-options-option-section-label-switch-slider"
+                            id="stat-options-option-section-owner-status-switch-slider">
+                            <h1 class="stat-options-option-section-label-switch-slider-text"
+                                id="stat-options-option-section-owner-label-switch-slider-text">Inactive</h1>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Region Tracker -->
+            <div class="stat-options-option" id="stat-options-option">
+                <div class="stat-options-option-section-header"
+                    id="stat-options-option-section-region-header-container">
+                    <h1 class="stat-options-option-section-header-text" id="stat-options-option-section-region-header">
+                        Server Region
+                    </h1>
+                </div>
+                <div class="stat-options-option-section-description"
+                    id="stat-options-option-section-region-description-container">
+                    <p class="stat-options-option-section-description-text"
+                        id="stat-options-option-section-region-description">
+                        Display the current server region.
+                    </p>
+                </div>
+                <div class="stat-options-option-section-status"
+                    id="stat-options-option-section-region-status-container">
+                    <label for="stat-options-option-section-region-status" class="stat-options-option-section-label"
+                        id="stat-options-option-section-region-status-label">
+                        Status:
+                    </label>
+                    <div class="stat-options-option-section-label-switch-container"
+                        id="stat-options-option-section-region-status-switch-container">
+                        <span class="stat-options-option-section-label-switch-slider"
+                            id="stat-options-option-section-region-status-switch-slider">
+                            <h1 class="stat-options-option-section-label-switch-slider-text"
+                                id="stat-options-option-section-region-label-switch-slider-text">Inactive</h1>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Server Boosts -->
+            <div class="stat-options-option" id="stat-options-option">
+                <div class="stat-options-option-section-header" id="stat-options-option-section-boost-header-container">
+                    <h1 class="stat-options-option-section-header-text" id="stat-options-option-section-boost-header">
+                        Server Boosts
+                    </h1>
+                </div>
+                <div class="stat-options-option-section-description"
+                    id="stat-options-option-section-boost-description-container">
+                    <p class="stat-options-option-section-description-text"
+                        id="stat-options-option-section-boost-description">
+                        Display the current server boost count.
+                    </p>
+                </div>
+                <div class="stat-options-option-section-status" id="stat-options-option-section-boost-status-container">
+                    <label for="stat-options-option-section-boost-status" class="stat-options-option-section-label"
+                        id="stat-options-option-section-boost-status-label">
+                        Status:
+                    </label>
+                    <div class="stat-options-option-section-label-switch-container"
+                        id="stat-options-option-section-boost-status-switch-container">
+                        <span class="stat-options-option-section-label-switch-slider"
+                            id="stat-options-option-section-boost-status-switch-slider">
+                            <h1 class="stat-options-option-section-label-switch-slider-text"
+                                id="stat-options-option-section-boost-label-switch-slider-text">Inactive</h1>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Boost Tier  -->
+            <div class="stat-options-option" id="stat-options-option">
+                <div class="stat-options-option-section-header"
+                    id="stat-options-option-section-boostTier-header-container">
+                    <h1 class="stat-options-option-section-header-text"
+                        id="stat-options-option-section-boostTier-header">
+                        Server Boost Tier
+                    </h1>
+                </div>
+                <div class="stat-options-option-section-description"
+                    id="stat-options-option-section-boostTier-description-container">
+                    <p class="stat-options-option-section-description-text"
+                        id="stat-options-option-section-boostTier-description">
+                        Display the current server boost tier.
+                    </p>
+                </div>
+                <div class="stat-options-option-section-status"
+                    id="stat-options-option-section-boostTier-status-container">
+                    <label for="stat-options-option-section-boostTier-status" class="stat-options-option-section-label"
+                        id="stat-options-option-section-boostTier-status-label">
+                        Status:
+                    </label>
+                    <div class="stat-options-option-section-label-switch-container"
+                        id="stat-options-option-section-boostTier-status-switch-container">
+                        <span class="stat-options-option-section-label-switch-slider"
+                            id="stat-options-option-section-boostTier-status-switch-slider">
+                            <h1 class="stat-options-option-section-label-switch-slider-text"
+                                id="stat-options-option-section-boostTier-label-switch-slider-text">Inactive</h1>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Server Bots -->
+            <div class="stat-options-option" id="stat-options-option">
+                <div class="stat-options-option-section-header" id="stat-options-option-section-bots-header-container">
+                    <h1 class="stat-options-option-section-header-text" id="stat-options-option-section-bots-header">
+                        Server Bots
+                    </h1>
+                </div>
+                <div class="stat-options-option-section-description"
+                    id="stat-options-option-section-bots-description-container">
+                    <p class="stat-options-option-section-description-text"
+                        id="stat-options-option-section-bots-description">
+                        Display the current server bot count.
+                    </p>
+                </div>
+                <div class="stat-options-option-section-status" id="stat-options-option-section-bots-status-container">
+                    <label for="stat-options-option-section-bots-status" class="stat-options-option-section-label"
+                        id="stat-options-option-section-bots-status-label">
+                        Status:
+                    </label>
+                    <div class="stat-options-option-section-label-switch-container"
+                        id="stat-options-option-section-bots-status-switch-container">
+                        <span class="stat-options-option-section-label-switch-slider"
+                            id="stat-options-option-section-bots-status-switch-slider">
+                            <h1 class="stat-options-option-section-label-switch-slider-text"
+                                id="stat-options-option-section-bots-label-switch-slider-text">Inactive</h1>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of page code -->
+    </div>
+    <div class="error-container" id="error-container">
+        <h1 class="error-message" id="error-message">
+            Error
+        </h1>
+    </div>
+    <div class="success-popup" id="success-popup">
+        <div class="success-popup-bar" id="success-popup-bar"></div>
+        <div class=" success-popup-image-container">
+            <img class="success-popup-image" src="../images/check-solid.svg">
+        </div>
+        <div class=" success-popup-words-container">
+            <h2 class="success-popup-words">
+                Your changes have been saved!
+            </h2>
+        </div>
+    </div>
+    <div class="body-dropdown-menu-cover" id="body-dropdown-menu-cover"></div>
+</body>
+<header class="header">
+    <div class="header-section" id="header-section-back">
+        <img src="../images/arrow-left-solid.svg" class="header-section-arrow" id="header-section-arrow-back">
+    </div>
+    <div class="header-section" id="header-section-profile">
+        <button class="header-button" id="header-button-profile">
+            <img class="header-profile-icon" id="header-profile-icon" src="../images/discord icon.png">
+        </button>
+        <div class="header-profile-dropdown-menu" id="header-profile-dropdown-menu">
+            <div class="header-profile-dropdown-menu-button" id="header-profile-dropdown-menu-button-close">
+                <Div class="header-profile-dropdown-menu-button-bar" id="header-profile-dropdown-menu-button-bar-top">
+                </Div>
+                <Div class="header-profile-dropdown-menu-button-bar"
+                    id="header-profile-dropdown-menu-button-bar-bottom"></Div>
+            </div>
+            <ul class="header-profile-dropdown-menu-list" id="header-profile-dropdown-menu-list">
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-home">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-home">
+                        Home
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item" id="header-profile-dropdown-menu-list-item-servers">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-servers">
+                        My Servers
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-premium-management">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-premium-management">
+                        Premium Management
+                    </button>
+                </li>
+                <li class="header-profile-dropdown-menu-list-item"
+                    id="header-profile-dropdown-menu-list-item-support-server">
+                    <button class="header-profile-dropdown-menu-list-item-button"
+                        id="header-profile-dropdown-menu-list-item-button-support-server">
+                        Support Server
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Page loader -->
+
+<div class="loader-container" id="loader-container">
+    <!-- Bot Image -->
+    <div class="loader-icon-container" id="loader-icon-container">
+        <img src="../images/gods eye loader.gif" class="loader-icon-animation" id="loader-icon-animation">
+    </div>
+</div>
+
+</html>

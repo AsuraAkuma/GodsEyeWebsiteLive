@@ -1,0 +1,300 @@
+/* Variables */
+:root {
+    --geGreen: #00ff00;
+    --geRed: #8c1224;
+    --geDarkGrey: #171717;
+    --geMidGrey: #444444;
+    --geDarkerMidGrey: #222222;
+    --geLightGrey: #999999;
+    --geLightYellow: #ffed9a;
+    --geRichYellow: #ffd000;
+}
+
+/* Suggestion Channel Section */
+#body-section-suggestionChannel {
+    position: absolute;
+    height: 15%;
+    width: 20%;
+    top: 12%;
+    left: 3.33%;
+    border-radius: .75vh;
+    background-color: var(--geDarkerMidGrey);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    /* border: 1px solid red; */
+}
+
+.body-section-row {
+    position: relative;
+    width: 100%;
+    min-height: 20%;
+    height: min-content;
+    top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.body-section-row-header {
+    position: relative;
+    color: white;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    font-size: calc((((100vh + 100vw)/2)/45));
+    border-bottom: 2px solid var(--geMidGrey);
+}
+
+.body-section-row-input {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    background-color: var(--geMidGrey);
+    border-radius: .75vh;
+    font-size: calc((((100vh + 100vw)/2)/60));
+    color: var(--geRichYellow);
+    border: 2px solid #17171700;
+}
+
+.body-section-row-button {
+    position: relative;
+    width: 40%;
+    font-size: calc((((100vh + 100vw)/2)/60));
+}
+
+/* Suggestion List Section */
+#body-section-suggestions {
+    position: absolute;
+    height: 87%;
+    width: 70%;
+    top: 12%;
+    left: 26.66%;
+    border-radius: .75vh;
+    background-color: var(--geDarkerMidGrey);
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+#body-section-list-suggestions {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* border: 1px solid red; */
+}
+
+.body-section-list-item {
+    position: relative;
+    height: 40%;
+    width: 90%;
+    left: calc(5% - 2px);
+    top: 2%;
+    border-radius: .75vh;
+    background-color: var(--geMidGrey);
+    border: 2px solid #17171700;
+    transition: all .2s ease-in-out;
+    cursor: default;
+}
+
+.body-section-list-item:hover {
+    border-color: red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-list-item-nameRow {
+    position: relative;
+    width: 98%;
+    left: 1%;
+    top: 2%;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    border-bottom: 2px solid var(--geLightGrey);
+}
+
+.body-section-list-item-nameRow-text {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/40));
+    /* border-bottom: 2px solid red; */
+}
+
+.body-section-list-item-descriptRow {
+    position: relative;
+    width: 85%;
+    height: 70%;
+    left: 1%;
+    top: 2%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    border-right: 1px solid var(--geLightGrey);
+}
+
+.body-section-list-item-descriptRow-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/50));
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    /* border: 1px solid red; */
+}
+
+.body-section-list-item-votesColumn {
+    position: absolute;
+    left: 86%;
+    top: 13%;
+    width: 13%;
+    height: 70%;
+    /* border: 1px solid red; */
+}
+
+.body-section-list-item-votesColumn-upvotesLabel {
+    position: relative;
+    height: min-content;
+    width: 100%;
+    top: 5%;
+    text-align: center;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/40));
+    border-bottom: 1px solid var(--geLightGrey);
+}
+
+.body-section-list-item-votesColumn-upvotesNum {
+    position: relative;
+    height: min-content;
+    width: 100%;
+    top: 7.5%;
+    text-align: center;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/50));
+    /* border-bottom: 1px solid var(--geLightGrey); */
+}
+
+.body-section-list-item-votesColumn-downvotesLabel {
+    position: relative;
+    height: min-content;
+    width: 100%;
+    top: 15%;
+    text-align: center;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/40));
+    border-bottom: 1px solid var(--geLightGrey);
+}
+
+.body-section-list-item-votesColumn-downvotesNum {
+    position: relative;
+    height: min-content;
+    width: 100%;
+    top: 17.5%;
+    text-align: center;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/50));
+}
+
+.body-section-list-item-actionRow {
+    position: relative;
+    height: 15%;
+    width: 100%;
+    top: 3%;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    /* border: 1px solid red; */
+}
+
+.body-section-list-item-actionRow-statusLabelContainer {
+    position: relative;
+    height: 100%;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.body-section-list-item-actionRow-statusLabelContainer-statusLabel {
+    position: relative;
+    color: white;
+    height: min-content;
+    font-size: calc((((100vh + 100vw)/2)/40));
+    left: 5%;
+}
+
+.body-section-list-item-actionRow-statusContainer {
+    position: relative;
+    width: 20%;
+    height: 80%;
+    top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background-color: var(--geLightGrey);
+    border-radius: .75vh;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border: 2px solid #17171700;
+}
+
+.body-section-list-item-actionRow-statusContainer:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-section-list-item-actionRow-statusContainer:hover .body-section-list-item-actionRow-statusContainer-slider {
+    filter: brightness(2);
+    filter: saturate(3);
+}
+
+.body-section-list-item-actionRow-statusContainer-slider {
+    position: relative;
+    width: 45%;
+    height: 90%;
+    top: 5%;
+    left: 2.5%;
+    background-color: var(--geRed);
+    border-radius: .75vh;
+    transition: all .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.body-section-list-item-actionRow-statusContainer-slider-text {
+    position: relative;
+    height: min-content;
+    color: var(--geRichYellow);
+    font-size: calc(((100vh + 100vw)/2)/60);
+    text-align: center;
+    transition: all .2s ease-in-out;
+    /* border: 2px solid red; */
+}
+
+.body-section-list-item-actionRow-approveButton {
+    width: 10%;
+    font-size: calc((((100vh + 100vw)/2)/55));
+}
+
+.body-section-list-item-actionRow-rejectButton {
+    width: 10%;
+    font-size: calc((((100vh + 100vw)/2)/55));
+}
+
+.body-section-list-item-actionRow-closeButton {
+    width: 10%;
+    font-size: calc((((100vh + 100vw)/2)/55));
+}

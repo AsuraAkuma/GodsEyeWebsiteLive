@@ -1,0 +1,307 @@
+/* Variables */
+:root {
+    --geGreen: #00ff00;
+    --geRed: #8c1224;
+    --geDarkGrey: #171717;
+    --geMidGrey: #444444;
+    --geLightGrey: #999999;
+    --geLightYellow: #ffed9a;
+    --geRichYellow: #ffd000;
+}
+
+.body-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 3.33%;
+}
+
+.section-container {
+    position: relative;
+    width: 45%;
+    left: 3.33%;
+    top: 12%;
+    height: 87%;
+    overflow: hidden;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    background-color: var(--geMidGrey);
+    border-radius: .75vh;
+}
+
+.section-list {
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* border: 2px solid blue; */
+}
+
+.section-container-section {
+    position: relative;
+    height: min-content;
+    width: 98%;
+    left: 1%;
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid blue; */
+}
+
+#section-container-panel-section-header {
+    justify-content: center;
+    align-content: center;
+}
+
+.section-container-section-header {
+    position: relative;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    color: white;
+    border-bottom: 2px solid var(--geLightGrey);
+    font-size: calc((((100vh + 100vw)/2)/35));
+}
+
+.section-container-section-info {
+    position: relative;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/50));
+}
+
+.section-container-section-label {
+    position: relative;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/50));
+}
+
+.section-container-section-input {
+    position: relative;
+    background-color: var(--geDarkGrey);
+    border: 2px solid #17171700;
+    border-radius: .75vh;
+    left: 2%;
+    width: 50%;
+    color: var(--geRichYellow);
+    font-size: calc((((100vh + 100vw)/2)/60));
+}
+
+.section-container-button {
+    position: absolute;
+    height: 6%;
+    width: 20%;
+    font-size: calc((((100vh + 100vw)/2)/50));
+    top: 93%;
+    left: 79%;
+}
+
+.section-list-item {
+    position: relative;
+    height: 10%;
+    width: 98%;
+    left: 1%;
+    margin-bottom: 1%;
+    border-bottom: 2px solid var(--geLightGrey);
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    /* border: 2px solid blue; */
+}
+
+.section-list-item-name {
+    position: relative;
+    width: 25%;
+    height: min-content;
+    top: 25%;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: calc((((100vh + 100vw)/2)/45));
+    /* border: 2px solid blue; */
+}
+
+.section-list-item-container {
+    position: relative;
+    /* border: 2px solid blue; */
+    top: 5%;
+    height: min-content;
+}
+
+.section-list-item-container-category {
+    position: relative;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/50));
+}
+
+.section-list-item-container-userLimit {
+    position: relative;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/50));
+}
+
+.section-list-item-span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 1%;
+    opacity: 0%;
+    background-color: rgb(23, 23, 23, .75);
+    transition: all .2s ease-in-out;
+    border-top-right-radius: .75vh;
+    border-top-left-radius: .75vh;
+}
+
+.section-list-item-span:hover {
+    opacity: 100%;
+}
+
+.section-list-item-span-button {
+    position: relative;
+    width: 15%;
+    height: 60%;
+    top: 20%;
+    left: -1%;
+    font-size: calc((((100vh + 100vw)/2)/60));
+}
+
+.section-container-section-list {
+    position: relative;
+    display: none;
+}
+
+#section-container-panel-section-hublist {
+    position: relative;
+    height: 59%;
+    width: 98%;
+    left: 1%;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+
+.section-container-section-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.section-container-section-list-item {
+    position: relative;
+    height: 15%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    border-bottom: 2px solid var(--geLightGrey);
+}
+
+.section-container-section-list-item:hover .section-container-section-list-item-span {
+    opacity: 100%;
+}
+
+.section-container-section-list-item-name {
+    position: relative;
+    color: white;
+    height: min-content;
+    width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    top: 25%;
+    font-size: calc((((100vh + 100vw)/2)/25));
+    /* border: 2px solid red; */
+}
+
+.section-container-section-list-item-container {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-container-section-list-item-span {
+    position: absolute;
+    opacity: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(23, 23, 23, .75);
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 1%;
+    transition: all .2s ease-in-out;
+    border-top-right-radius: .75vh;
+    border-top-left-radius: .75vh;
+}
+
+.section-container-section-list-item-container-category {
+    position: relative;
+    height: min-content;
+    width: 100%;
+    top: 15%;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/40));
+}
+
+.section-container-section-list-item-container-userLimit {
+    position: relative;
+    height: min-content;
+    width: 100%;
+    top: 15%;
+    color: white;
+    font-size: calc((((100vh + 100vw)/2)/40));
+}
+
+.section-container-section-list-item-span-button {
+    position: relative;
+    width: 25%;
+    height: 60%;
+    top: 20%;
+    left: -1%;
+    font-size: calc((((100vh + 100vw)/2)/30));
+}
+
+@media screen and (max-width: 700px) {
+    .section-container-section-list {
+        display: block;
+    }
+
+    #section-container-hubs {
+        display: none;
+    }
+
+    #section-container-panel {
+        width: 90%;
+        left: 5%;
+        height: 91%;
+        top: 8%;
+    }
+
+    .section-container-section-header {
+        font-size: calc((((100vh + 100vw)/2)/20));
+    }
+
+    .section-container-section-info {
+        font-size: calc((((100vh + 100vw)/2)/35));
+    }
+
+    .section-container-section-label {
+        font-size: calc((((100vh + 100vw)/2)/35));
+    }
+
+    #section-container-button-save {
+        font-size: calc((((100vh + 100vw)/2)/30));
+        width: 30%;
+        left: 68%;
+    }
+}

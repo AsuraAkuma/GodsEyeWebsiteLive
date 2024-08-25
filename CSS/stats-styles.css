@@ -1,0 +1,132 @@
+/* Variables */
+:root {
+    --geGreen: #00ff00;
+    --geRed: #8c1224;
+    --geDarkGrey: #171717;
+    --geMidGrey: #444444;
+    --geLightGrey: #999999;
+    --geLightYellow: #ffed9a;
+    --geRichYellow: #ffd000;
+}
+
+.stat-options-container {
+    position: absolute;
+    width: 90%;
+    height: 88%;
+    top: 12%;
+    left: 5%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 20vw));
+    grid-template-rows: repeat(auto-fit, minmax(40vh, 40vh));
+    grid-template-areas: "a a a";
+    gap: calc(((100vh + 100vw)/2)/40);
+    overflow: auto;
+    /* border: 2px solid red; */
+}
+
+.stat-options-option {
+    position: relative;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    background-color: var(--geMidGrey);
+    border-radius: .75vh;
+    cursor: default;
+    /* border: 2px solid red; */
+}
+
+.stat-options-option-section-header {
+    position: relative;
+    height: min-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    /* border: 2px solid blue; */
+}
+
+.stat-options-option-section-header-text {
+    position: relative;
+    color: white;
+    border-bottom: 2px solid var(--geLightGrey);
+}
+
+.stat-options-option-section-description {
+    position: relative;
+    height: 70%;
+    width: 96%;
+    left: 2%;
+    /* border: 2px solid blue; */
+}
+
+.stat-options-option-section-description-text {
+    position: relative;
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/45);
+}
+
+.stat-options-option-section-status {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    height: 12%;
+    /* border: 2px solid blue; */
+}
+
+.stat-options-option-section-label {
+    position: relative;
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/45);
+    left: 2%;
+}
+
+.stat-options-option-section-label-switch-container {
+    position: relative;
+    width: 65%;
+    height: 100%;
+    border: 2px solid #17171700;
+    left: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background-color: var(--geLightGrey);
+    border-radius: .75vh;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.stat-options-option-section-label-switch-container:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.stat-options-option-section-label-switch-container:hover .stat-options-option-section-label-switch-slider {
+    filter: brightness(2);
+    filter: saturate(3);
+}
+
+.stat-options-option-section-label-switch-slider {
+    position: relative;
+    width: 45%;
+    height: 90%;
+    top: 5%;
+    left: 2.5%;
+    background-color: var(--geRed);
+    border-radius: .75vh;
+    transition: all .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.stat-options-option-section-label-switch-slider-text {
+    position: relative;
+    color: var(--geRichYellow);
+    font-size: calc(((100vh + 100vw)/2)/55);
+    text-align: center;
+    transition: all .2s ease-in-out;
+}

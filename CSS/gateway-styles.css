@@ -1,0 +1,167 @@
+/* Variables */
+:root {
+    --geGreen: #00ff00;
+    --geRed: #8c1224;
+    --geDarkGrey: #171717;
+    --geMidGrey: #444444;
+    --geDarkerMidGrey: #222222;
+    --geLightGrey: #999999;
+    --geLightYellow: #ffed9a;
+    --geRichYellow: #ffd000;
+}
+
+/* Center */
+
+.center-vert {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: min-content;
+}
+
+.center-horz {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Panel */
+.body-panel {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    top: 15%;
+    left: 25%;
+    background-color: var(--geDarkerMidGrey);
+    border-radius: .75vh;
+}
+
+.body-panel-input {
+    position: absolute;
+    height: 8%;
+    width: 45%;
+    left: 2%;
+    background-color: var(--geMidGrey);
+    border-radius: .75vh;
+    outline: none;
+    border-color: #17171700;
+    color: white;
+    font-size: calc(((100vh + 100vw)/2)/50);
+    transition: all .2s ease-in-out;
+}
+
+.body-panel-input:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-panel-input:focus {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+#body-panel-input-channel {
+    top: 10%;
+}
+
+#body-panel-input-roles {
+    top: 30%;
+}
+
+.body-panel-header {
+    position: absolute;
+    font-size: calc(((100vh + 100vw)/2)/40);
+    color: white;
+    left: 2%;
+    cursor: default;
+}
+
+#body-panel-header-channel {
+    top: 1%;
+}
+
+#body-panel-header-roles {
+    top: 21%;
+}
+
+/* Role List */
+.body-panel-roleList {
+    position: absolute;
+    height: 90%;
+    width: 45%;
+    left: 53%;
+    top: 5%;
+    border-radius: .75vh;
+    background-color: var(--geMidGrey);
+    list-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.body-panel-roleList-item {
+    position: relative;
+    background-color: var(--geDarkGrey);
+    border-radius: .75vh;
+    height: min-content;
+    width: 90%;
+    left: 5%;
+    top: 2%;
+    margin-bottom: 2%;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.body-panel-roleList-item:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+}
+
+.body-panel-roleList-item-h1 {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: calc(((100vh + 100vw)/2)/45);
+}
+
+/* Button */
+.body-panel-button-container {
+    position: absolute;
+    height: 8%;
+    width: 45%;
+    left: 2%;
+    top: 88%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid red;
+}
+
+.body-panel-button {
+    position: relative;
+    height: 100%;
+    width: 45%;
+    border-radius: .75vh;
+    background-color: var(--geRed);
+    color: var(--geRichYellow);
+    border-color: #17171700;
+    font-size: calc(((100vh + 100vw)/2)/50);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.body-panel-button:hover {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 0px red;
+    background-color: red;
+}
+
+#body-panel-button-disable {
+    display: none;
+}
